@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "backendapi.apps.BackendapiConfig",
     "rest_framework",
+    "ckeditor",
 ]
 
 MIDDLEWARE = [
