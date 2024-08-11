@@ -61,7 +61,6 @@ class ServicesOffred(models.Model):
 class LanguagesIcons(models.Model):
     EXP_CHOICES = (
         ("Beginner", "Beginner"),
-        ("Junior", "Junior"),
         ("Intermediate", "Intermediate"),
         ("Experienced", "Experienced"),
     )

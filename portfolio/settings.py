@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     "rest_framework",
     "ckeditor",
     "ckeditor_uploader",
+    "corsheaders",
+    "tinymce",
 ]
 
 MIDDLEWARE = [
