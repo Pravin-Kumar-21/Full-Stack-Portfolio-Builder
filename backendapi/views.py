@@ -1,13 +1,20 @@
 from django.shortcuts import render
 from rest_framework import generics, mixins
-from .serializers import HomepageSerializer
-from .models import Homepage
+from . import serializers
+from . import models
 
 
-class HomepageListCreateApiView(generics.ListCreateAPIView):
-    queryset = Homepage.objects.all()
-    print(queryset)
-    serializer_class = HomepageSerializer
+class HomepageApiView(generics.ListAPIView):
+    queryset = models.Homepage.objects.all()
+    serializer_class = serializers.HomepageSerializer
+
+    def perform_create(self, serializer):
+        print(serializer.validated_data)
+        return super().perform_create(serializer)
+
+class AboutApiView(generics.ListAPIView):
+    queryset = models.About.objects.all()
+    serializer_class = serializers.AboutSerializer
 
     def perform_create(self, serializer):
         print(serializer.validated_data)

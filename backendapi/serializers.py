@@ -1,44 +1,44 @@
 from rest_framework import serializers
-from .models import *
+from . import models
 
 
 class HomepageSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Homepage
+        model = models.Homepage
         fields = "__all__"
 
 
 class AboutSerializer(serializers.ModelSerializer):
     class Meta:
-        model = About
+        model = models.About
         fields = "__all__"
 
 
 class ServiceSerializer(serializers.ModelSerializer):
     class Meta:
-        model = ServicesOffred
+        model = models.ServicesOffred
         fields = "__all__"
 
 
 class LanguageiconSerializer(serializers.ModelSerializer):
     class Meta:
-        model = LanguagesIcons
+        model = models.LanguagesIcons
         fields = "__all__"
 
 
 class ProjectSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Project
+        model = models.Project
         fields = "__all__"
 
 
 class MyContactSerializer(serializers.ModelSerializer):
     class Meta:
-        model = MyContact
+        model = models.MyContact
         fields = "__all__"
 
 
 class SocialMediaLinksSerializer(serializers.ModelSerializer):
     class Meta:
-        model = SocialMediaLinks
+        model = models.SocialMediaLinks
         fields = "__all__"
