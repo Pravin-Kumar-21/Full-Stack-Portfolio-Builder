@@ -93,7 +93,7 @@ class Project(models.Model):
     Project_title = models.CharField(max_length=90, blank=True, null=True)
     Project_info = models.TextField(blank=True, null=True)
     project_link = models.URLField(blank=True, null=True)
-    demo_link = models.URLField(blank=True, null=True)
+    video_link = models.URLField(blank=True, null=True)
 
     def __str__(self):
         return self.Project_title
