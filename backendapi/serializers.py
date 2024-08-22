@@ -5,40 +5,77 @@ from . import models
 class HomepageSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Homepage
-        fields = "__all__"
+        fields = [
+            "name",
+            "intro",
+            "job_title",
+            "avatar_img",
+            "paragraph",
+            "HireMe_link",
+            "Resume_link",
+        ]
 
 
 class AboutSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.About
-        fields = "__all__"
+        fields = [
+            "Heading",
+            "subheading",
+            "description",
+        ]
 
 
 class ServiceSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.ServicesOffred
-        fields = "__all__"
+        fields = [
+            "icon_image",
+            "service_name",
+            "shadow_icon",
+            "service_description",
+        ]
 
 
 class LanguageiconSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.LanguagesIcons
-        fields = "__all__"
+        fields = [
+            "icon",
+            "lang_name",
+            "exp_level",
+        ]
 
 
 class ProjectSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Project
-        fields = "__all__"
+        fields = [
+            "language_used",
+            "about_avatar",
+            "updated_on",
+            "Project_title",
+            "Project_info",
+            "project_link",
+            "video_link",
+        ]
 
 
 class MyContactSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.MyContact
-        fields = "__all__"
+        fields = [
+            "icon",
+            "contact_info",
+            "contact_name",
+        ]
 
 
 class SocialMediaLinksSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.SocialMediaLinks
-        fields = "__all__"
+        fields = [
+            "name",
+            "link",
+            "social_icon",
+        ]
