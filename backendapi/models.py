@@ -19,11 +19,11 @@ class Homepage(models.Model):
     HireMe_link = models.CharField(max_length=100, blank=True, null=True)
     Resume_link = models.URLField(blank=True, null=True)
 
+    def __str__(self):
+        return self.name
+
     class Meta:
         verbose_name_plural = "Homepage Section"
-
-        def __str__(self) -> str:
-            return self.name
 
 
 class About(models.Model):
@@ -36,11 +36,11 @@ class About(models.Model):
         blank=True, null=True, verbose_name="Brief Explanation about yourself"
     )
 
+    def __str__(self) -> str:
+        return self.Heading
+
     class Meta:
         verbose_name_plural = "About Me"
-
-        def __str__(self) -> str:
-            return self.Heading
 
 
 class ServicesOffred(models.Model):
@@ -51,17 +51,16 @@ class ServicesOffred(models.Model):
     shadow_icon = models.CharField(max_length=40, blank=True, null=True)
     service_description = models.TextField(blank=True, null=True)
 
-    class Meta:
-        verbose_name_plural = "Services Section"
-
     def __str__(self):
         return self.service_name
+
+    class Meta:
+        verbose_name_plural = "Services Section"
 
 
 class LanguagesIcons(models.Model):
     EXP_CHOICES = (
         ("Beginner", "Beginner"),
-        ("Junior", "Junior"),
         ("Intermediate", "Intermediate"),
         ("Experienced", "Experienced"),
     )
@@ -76,11 +75,11 @@ class LanguagesIcons(models.Model):
         max_length=200, blank=True, choices=EXP_CHOICES, verbose_name="Experience Level"
     )
 
-    class Meta:
-        verbose_name_plural = "Skills section"
-
     def __str__(self):
         return self.lang_name
+
+    class Meta:
+        verbose_name_plural = "Skills section"
 
 
 class Project(models.Model):
@@ -94,13 +93,13 @@ class Project(models.Model):
     Project_title = models.CharField(max_length=90, blank=True, null=True)
     Project_info = models.TextField(blank=True, null=True)
     project_link = models.URLField(blank=True, null=True)
-    demo_link = models.URLField(blank=True, null=True)
-
-    class Meta:
-        verbose_name_plural = "Projects Section"
+    video_link = models.URLField(blank=True, null=True)
 
     def __str__(self):
         return self.Project_title
+
+    class Meta:
+        verbose_name_plural = "Projects Section"
 
 
 class MyContact(models.Model):
@@ -117,11 +116,11 @@ class MyContact(models.Model):
         max_length=30, blank=True, null=True, verbose_name="Contact Name (eg: twitter)"
     )
 
-    class Meta:
-        verbose_name_plural = "Contacts Section"
-
     def __str__(self):
         return self.contact_name
+
+    class Meta:
+        verbose_name_plural = "Contacts Section"
 
 
 class SocialMediaLinks(models.Model):
@@ -131,8 +130,8 @@ class SocialMediaLinks(models.Model):
         max_length=60, blank=True, null=True, verbose_name="Icon (eg: fa -fa-twitter)"
     )
 
+    def __str__(self):
+        return self.name
+
     class Meta:
         verbose_name_plural = "Social Media Links"
-
-    def __str__(self):
-        return self.social_icon
