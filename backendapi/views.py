@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from rest_framework import generics, mixins
+from rest_framework import generics
 from . import serializers
 from . import models
 
@@ -37,3 +37,8 @@ class SocialMediaLinkApi(generics.ListAPIView):
 class MycontactApi(generics.ListAPIView):
     queryset = models.MyContact.objects.all()
     serializer_class = serializers.MyContactSerializer
+
+
+class MyWorkExperienceAPI(generics.ListAPIView):
+    queryset = models.WorkExperience.objects.all()
+    serializer_class = serializers.WorkExperienceSerializers

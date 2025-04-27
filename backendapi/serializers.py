@@ -79,3 +79,16 @@ class SocialMediaLinksSerializer(serializers.ModelSerializer):
             "link",
             "social_icon",
         ]
+
+
+class WorkExperienceSerializers(serializers.ModelSerializer):
+
+    class Meta:
+        models = models.WorkExperience
+        feilds = [
+            "company_name",
+            "job_title",
+            "start_date"
+            "end_date",
+            "description",
+        ]

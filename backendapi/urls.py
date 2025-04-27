@@ -9,4 +9,9 @@ urlpatterns = [
     path("social/", views.SocialMediaLinkApi.as_view(), name="social"),
     path("contactme/", views.MycontactApi.as_view(), name="contact"),
     path("services/", views.ServiceApi.as_view(), name="service"),
+    path(
+        "work-experience/",
+        views.MyWorkExperienceAPI.as_view(),
+        name="work-experience",
+    )
 ]

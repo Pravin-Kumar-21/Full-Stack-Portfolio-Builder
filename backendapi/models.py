@@ -135,3 +135,17 @@ class SocialMediaLinks(models.Model):
 
     class Meta:
         verbose_name_plural = "Social Media Links"
+
+
+class WorkExperience(models.Model):
+    company_name = models.CharField(max_length=100, blank=True, null=True)
+    job_title = models.CharField(max_length=100, blank=True, null=True)
+    start_date = models.DateField(blank=True, null=True)
+    end_date = models.DateField(blank=True, null=True)
+    description = RichTextField(blank=True, null=True)
+
+    def __str__(self):
+        return self.company_name
+
+    class Meta:
+        verbose_name_plural = "Work Experience"
