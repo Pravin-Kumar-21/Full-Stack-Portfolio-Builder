@@ -1,14 +1,11 @@
 .homepage {
-  width: 100%;
-  max-width: 100%;
-  height: 60%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  width: 100vw;
+  max-width: 100vw;
+  margin: 0;
+  margin-top: 40px;
   padding: 0 10px;
-  position: absolute;
-  top: 60px;
-  left: 0px;
+  justify-content: space-between;
+  display: flex;
   background-color: #1C1C1C;
   z-index: 500;
   transition: all 0.5s ease-in-out;
@@ -33,38 +30,44 @@
 
 .intro-name h1 {
   font-size: 60px;
+  color: white;
   line-height: 1.4em;
   animation: dropIn 0.5s ease forwards;
   transition: all 0.4s ease-in-out;
 }
 
 .intro-name p {
-  font-size: 18px;
-  line-height: 1.1em;
-  color: #BFC1C2;
+  font-size: 22px;
+  line-height: 2.0em;
+  color: white;
   animation: dropIn 0.5s ease forwards;
   transition: all 0.4s ease-in-out;
 }
 
 .btn-gradient {
-  width: 180px;
-  height: 50px;
+  width: 200px;
+  height: 70px;
   margin: 20px auto;
-  padding: 12px;
-  color: white;
-  font-weight: bold;
-  border-radius: 10px;
-  background: linear-gradient(135deg, #1E90FF, #20C997);
+  padding: 12px 24px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 20px;
+  text-align: center;
+  border: none;
+  border-radius: 44px;
+  background: linear-gradient(135deg, #20C997 , #1E90FF);
+  background-size: 200% 200%;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-position 0.5s ease;
   animation: fadeUp 0.5s ease-out forwards;
   cursor: pointer;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .btn-gradient:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
-  
+  transform: scale(1.08);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  background-position: right center;
 }
 
 .social-links {
@@ -75,16 +78,15 @@
 }
 
 .user-avatar {
-  width: 350px;
-  height: 400px;
-  position: relative;
-  top: 75px;
-  right: 75px;
-  border: 0.5px solid #BFC1C2;
-  border-radius: 10px;
-  background-color: white;
-  background-clip: border-box;
+  width: 600px;
+  height: 500px;
+  margin: 75px 40px;
+  /* position: absolute;
+  top: 60px;
+  right: 30px; */
   padding: 2px;
+  border-radius: 12px;
+  box-sizing: border-box;
   animation: fadeUp 0.5s ease-out forwards;
   transition: all 0.5s ease-in-out;
 }
@@ -94,10 +96,10 @@
   height: 100%;
   border-radius: 10px;
   object-fit: cover;
+  display: block;
   animation: dropIn 0.5s ease forwards;
   transition: all 0.4s ease-in-out;
 }
-
 
 @keyframes fadeUp {
   0% {
@@ -127,17 +129,16 @@
 @media screen and (max-width: 940px) {
   .homepage {
     width: 100%;
-    height: 80%;
+    height: auto;
     flex-direction: column;
     align-items: center;
-    position: absolute;
     text-align: center;
     margin-bottom: 10px;
   }
 
   .intro {
     width: 100%;
-    margin: 0;
+    margin: 4px;
   }
 
   .intro-name h1 {
@@ -146,8 +147,10 @@
   }
 
   .intro-name p {
-    margin-top: 200px;
     font-size: 20px;
+    margin: 10px 30px;
+    margin-top: 200px;
+    align-items: center;
   }
 
   .btn-gradient {
@@ -159,21 +162,30 @@
     justify-content: center;
   }
 
-  .user-avatar {
-    width: 150px;
-    height: 150px;
-    position: absolute;
-    top: 25%;
-    left: 40%;
-    transform: translateX(-50%);
-    border-radius: 50%;
-    border: 0.5px solid #BFC1C2;
-  }
-
-  .user-avatar img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    object-fit: cover;
-  }
+    .user-avatar {
+      width: 150px;
+      height: 150px;
+      margin-bottom: 10px;
+      position: absolute;
+      top:15%;
+      justify-content: center;
+      transform: translateX(auto);
+      border-radius: 50%;
+      border: 2px solid #1E90FF;
+      background-color: white;
+      padding: 3px;
+      box-sizing: border-box;
+      animation: fadeUp 0.5s ease-out forwards;
+      transition: all 0.5s ease-in-out;
+    }
+  
+    .user-avatar img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      animation: dropIn 0.5s ease forwards;
+      transition: all 0.4s ease-in-out;
+    }
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import './HomePage.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHandPointRight } from '@fortawesome/free-solid-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faHandPointRight } from '@fortawesome/free-solid-svg-icons';
 
 const HomePage = () => {
   return (
@@ -11,9 +11,14 @@ const HomePage = () => {
       
         <div className='intro-name'>
           <h1>Hey! I Am <br /><span className='highlight'>Pravin Kumar</span></h1>
-          <p>lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus</p>
+          <p>Full-Stack Engineer with strong experience in developing and deploying scalable web apps. Proficient in backend
+            development with Django, DjangoRestFramework, seamlessly integrating front-end tech like HTML, Django
+            templates, CSS, and Tailwind CSS. Skilled in React for smooth front-end and backend interaction. Adept at
+            designing robust Python APIs, optimizing performance, and enhancing UX. Hands-on with Elasticsearch, API
+            testing via Postman, and exploring machine learning. Proven ability to deliver innovative, high-quality, and
+            scalable solutions</p>
           <button className="btn-gradient">
-            <FontAwesomeIcon icon={faHandPointRight} style={{ color: '#C0C0C0', fontSize: '16px' }} /> HIRE ME
+            HIRE ME
           </button>
         </div>
         
@@ -38,10 +43,10 @@ const HomePage = () => {
       </div>
       
       <div className='user-avatar'>
-        <img src="https://avatars.githubusercontent.com/u/94698587?s=400&u=2fef5f4dc6aab581b670a9f89d34d5903fba1270&v=4" alt="User Avatar" />
+        <img src="/IMG_20220418_223644.jpg" alt="User Avatar" />
       </div>
       
     </div>
   )
 }
-export default HomePage 
+export default HomePage;
