@@ -2,6 +2,7 @@
 import React from 'react'
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
+import HomePage from './components/HomePage/HomePage';
 function App() {
   // const { startLoader, stopLoader } = useLoader();
 
@@ -19,6 +20,7 @@ function App() {
     <div>
       {/* <button onClick={handleClick}>Show Loader</button> */}
       <Navbar/>
+      <HomePage/>
     </div>
   );
 }

@@ -11,6 +11,7 @@
   align-items: center;
   padding: 0 10px;
   background-color: #444;
+  z-index: 1000;
 }
 
 .navbar-logo {
