@@ -1,0 +1,97 @@
+.skill-main {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  background: #222;
+  align-items: center;
+  padding-bottom: 100px;
+}
+
+.heading {
+  font-size: 48px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  color: white;
+  text-align: center;
+}
+
+.sub-heading {
+  margin-bottom: 80px;
+  font-size: x-large;
+  padding: 5px 24px;
+  text-align: center;
+}
+
+.lang-carousel {
+  width: 100%;
+  max-width: 100%;
+  margin: 0px 20px;
+  padding: 80px 0px ;
+  background-color: #222;
+}
+
+.mylang {
+  background: #1e1e1e;
+  padding: 24px;
+  margin: 10px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+  color: #fff;
+  text-align: center;
+  transition: transform 0.3s ease;
+  opacity: 0;
+  transform: translateX(30px);
+  animation: slideIn 0.6s ease-in forwards;
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.lang-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lang-img img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.lang-info h3 {
+  margin: 10px 0 5px;
+  font-size: 20px;
+  color: #00e1ff;
+}
+
+.exp-level {
+  font-size: 10px;
+  margin-top: 8px;
+  padding: 6px 12px;
+  border: 1px solid white;
+  border-radius: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: lighter;
+}
+
+/* Optional: text color */
+.Beginner {
+  color: rgb(150, 150, 150);
+}
+
+.Intermediate {
+  color: rgb(150, 150, 150);
+}
+
+.Expert {
+  color: rgb(150, 150, 150);
+}

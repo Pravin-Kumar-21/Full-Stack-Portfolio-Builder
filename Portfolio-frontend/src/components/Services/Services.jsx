@@ -14,7 +14,6 @@ const Services = () => {
           </span>
           
         </div>
-        
       </div>
     </div>
   )

@@ -5,6 +5,7 @@ import Navbar from './components/Navbar/Navbar';
 import HomePage from './components/HomePage/HomePage';
 import About from './components/About/About';
 import Services from './components/Services/Services';
+import Skills from './components/Skills/Skills';
 function App() {
   // const { startLoader, stopLoader } = useLoader();
 
@@ -25,6 +26,7 @@ function App() {
       <HomePage/>
       <About/>
       <Services/>
+      <Skills/>
     </div>
   );
 }
