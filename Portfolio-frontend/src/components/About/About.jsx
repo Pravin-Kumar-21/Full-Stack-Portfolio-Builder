@@ -32,7 +32,7 @@ const About = () => {
     </div>
     
       <div className='content-div'>
-        <span className='heading'>Work Experience</span>
+        <span className='highlight'>Work Experience</span>
 
         {/* Luein Analytics */}
         <div className='title-1' onClick={() => toggle('luein')}>

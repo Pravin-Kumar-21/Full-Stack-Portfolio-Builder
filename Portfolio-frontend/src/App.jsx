@@ -4,6 +4,7 @@ import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import HomePage from './components/HomePage/HomePage';
 import About from './components/About/About';
+import Services from './components/Services/Services';
 function App() {
   // const { startLoader, stopLoader } = useLoader();
 
@@ -23,6 +24,7 @@ function App() {
       <Navbar/>
       <HomePage/>
       <About/>
+      <Services/>
     </div>
   );
 }

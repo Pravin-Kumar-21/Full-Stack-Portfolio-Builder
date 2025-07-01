@@ -1,0 +1,143 @@
+.service-main{
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  background-color:rgb(35, 35, 35);
+  display: flex;
+  flex-direction: column;
+}
+.service-main .highlight {
+  font-size: 48px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 20px 80px;
+  text-shadow:royalblue;
+  animation: dropIn 0.5s ease forwards;
+}
+
+.service-main .sub-head {
+  font-size: 24px;
+  margin: 0px 80px;
+  margin-bottom: 20px;
+  color: white;
+  animation: fadeUp 0.5s ease-out forwards;
+
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.2),
+    0 0 8px rgba(255, 255, 255, 0.4),
+    0 0 12px rgba(255, 255, 255, 0.8);
+}
+
+.card-div {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 50px auto;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.card-div .card-img{
+  width: 80px;
+  height: 80px;
+  margin: 20px auto;
+  border: 1px solid;
+  
+}
+
+.card-div .card-heading{
+  margin: 10px 24px;
+  justify-content: center;
+}
+
+.card {
+  position: relative;
+  width: auto;
+  height: auto;
+  max-width: 500px;
+  max-height: 500px;
+  margin: 4px;
+  padding: 30px;
+  border-radius: 10px;
+  background: rgb(35, 35, 35);
+  color: #fff;
+  z-index: 1;
+  overflow: hidden;
+  animation: dropIn 0.5s ease forwards;
+}
+
+/* Glowing animated border */
+.card::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  background: linear-gradient(60deg, #ff0055, #00ffee, #00ff55, #ff0055);
+  background-size: 300% 300%;
+  animation: glowMove 6s linear infinite;
+  z-index: -1;
+  border-radius: 12px;
+  filter: blur(4px);
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  background: inherit;
+  border-radius: 9px;
+  z-index: -1;
+}
+
+@keyframes glowMove {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+@media screen and (max-width: 940px) {
+  .card-div {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      margin: 50px auto;
+      justify-content: center;
+      display: flex;
+      flex-direction:column;
+      flex-wrap: wrap;
+      transition: all 0.5s ease-in-out;
+    }
+  
+    .card {
+      position: relative;
+      width: auto;
+      height: auto;
+      max-width: 400px;
+      font-size:medium;
+      max-height: auto;
+      margin: 4px auto;
+      padding: 12px;
+      border-radius: 10px;
+      background: rgb(35, 35, 35);
+      color: #fff;
+      z-index: 1;
+      overflow: hidden;
+      animation: dropIn 0.5s ease forwards; 
+      transition: all 0.5s ease-in-out;
+    }
+  
+  
+}
