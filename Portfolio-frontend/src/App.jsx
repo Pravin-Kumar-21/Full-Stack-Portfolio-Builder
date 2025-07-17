@@ -6,6 +6,9 @@ import HomePage from './components/HomePage/HomePage';
 import About from './components/About/About';
 import Services from './components/Services/Services';
 import Skills from './components/Skills/Skills';
+import Project from './components/Projects/Projects'
+
+
 function App() {
   // const { startLoader, stopLoader } = useLoader();
 
@@ -27,6 +30,7 @@ function App() {
       <About/>
       <Services/>
       <Skills/>
+      <Project/>
     </div>
   );
 }
