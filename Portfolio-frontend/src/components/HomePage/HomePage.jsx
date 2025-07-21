@@ -10,7 +10,8 @@ const HomePage = () => {
       <div className='intro'>
       
         <div className='intro-name'>
-          <h1>Hey! I Am <br /><span className='highlight'>Pravin Kumar</span></h1>
+          <h1><span className='highlight'>Hello! I’m Pravin Kumar </span></h1>
+          <h2>Turning Ideas into Web Experiences</h2>
           <p>Full-Stack Engineer with strong experience in developing and deploying scalable web apps. Proficient in backend
             development with Django, DjangoRestFramework, seamlessly integrating front-end tech like HTML, Django
             templates, CSS, and Tailwind CSS. Skilled in React for smooth front-end and backend interaction. Adept at

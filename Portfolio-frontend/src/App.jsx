@@ -1,12 +1,13 @@
 // import { useLoader } from "./context/LoaderContext";
 import React from 'react'
 import './App.css';
-import Navbar from './components/Navbar/Navbar';
-import HomePage from './components/HomePage/HomePage';
-import About from './components/About/About';
-import Services from './components/Services/Services';
-import Skills from './components/Skills/Skills';
-import Project from './components/Projects/Projects'
+import Navbar from './components/Navbar/Navbar.jsx';
+import HomePage from './components/HomePage/HomePage.jsx';
+import MyWork from './components/My Work/MyWork.jsx';
+import Services from './components/Services/Services.jsx';
+import Skills from './components/Skills/Skills.jsx';
+import Project from './components/Projects/Projects.jsx'
+import About from './components/About/About.jsx';
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
       <HomePage/>
       <About/>
       <Services/>
+      <MyWork />
       <Skills/>
       <Project/>
     </div>

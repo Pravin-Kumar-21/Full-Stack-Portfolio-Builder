@@ -1,7 +1,20 @@
-.work-heading{
+.project-main{
   width: 100%;
   max-width: 100%;
   height: auto;
   max-height: auto;
-  background-color:rgba(5,5,5,0.7);
+  background-color:rgb(30,30,30);
+  padding-top: 20px;
+  padding-bottom: 40px;
 }
+.project-heading{
+  margin:40px;
+  font-size: large;
+  background: linear-gradient(200deg, #7398e9, #00ffb3);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.project-main{}

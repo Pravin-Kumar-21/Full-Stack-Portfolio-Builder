@@ -4,10 +4,13 @@ import './Projects.css'
 const Mywork = () => {
   
   return (
-    <div className='work-heading'>
-      <div className='card'>
+    <div className='project-main'>
+      <div className='project-heading'>
+      <h1>Projects</h1>
+    </div>
+      <div className='project-card'>
         <div className='card-content'>
-          hi
+          
         </div>
       </div>
     </div>

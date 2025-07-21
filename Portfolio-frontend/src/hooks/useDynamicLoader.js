@@ -9,7 +9,7 @@ export function useDynamicLoader() {
       if (!document.getElementById("dynamic-loader-css")) {
         const css = document.createElement("link");
         css.rel = "stylesheet";
-        css.href = "/dynamic-loader/dynamic-loader.css"; // ✅ Correct path
+        css.href = "/dynamic-loader/dynamic-loader.css"; 
         css.id = "dynamic-loader-css";
         document.head.appendChild(css);
       }
@@ -17,7 +17,7 @@ export function useDynamicLoader() {
       // Load JS
       if (!window.dynamic_loader_start) {
         const script = document.createElement("script");
-        script.src = "/dynamic-loader/dynamic-loader.js"; // ✅ Correct path
+        script.src = "/dynamic-loader/dynamic-loader.js"; 
         script.onload = () => {
           isLoaded = true;
           resolve();

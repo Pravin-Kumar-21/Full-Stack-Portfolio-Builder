@@ -1,84 +1,76 @@
-import React, { useRef, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './About.css';
 
 const About = () => {
-  const [open, setOpen] = useState({
-    luein: false,
-    celebal: false
-  });
+  const [heading, setHeading] = useState("Full Stack Developer");
 
-  const lueinRef = useRef(null);
-  const celebalRef = useRef(null);
+  const headingsArray = [
+    "Full Stack Developer",
+    "Frontend Developer",
+    "Backend Developer",
+    "Django Enthusiast",
+    "UI/UX Designer"
+  ];
 
-  const toggle = (key) => {
-    setOpen((prev) => ({ ...prev, [key]: !prev[key] }));
+  const changeHeading = () => {
+    let i = 0;
+    const interval = setInterval(() => {
+      setHeading(headingsArray[i % headingsArray.length]);
+      i++;
+    }, 2000); 
+
+    return () => clearInterval(interval);
   };
-
-  const getStyle = (ref, isOpen) => ({
-    maxHeight: isOpen ? `${ref.current?.scrollHeight}px` : '0px',
-    opacity: isOpen ? 1 : 0
-  });
+        
+  useEffect(() => {
+    changeHeading();
+  },[]); 
 
   return (
-    <div className='about-main'>
+    <div className="about-container">
+      <div className="about-title-wrapper">
+        <h1 className="about-title">About Me</h1>
+      </div>
     
-    <div className='left-block'>
-      <div className='img-div'>
-        <img src="./code for life.gif" alt="User Avatar" />
-      </div>
-      <div className='download-div'>
-        <button>Download Resume</button>
-      </div>
-    </div>
-    
-      <div className='content-div'>
-        <span className='highlight'>Work Experience</span>
-
-        {/* Luein Analytics */}
-        <div className='title-1' onClick={() => toggle('luein')}>
-          <span>1. Python Django Developer Intern</span>
-          <span className='arrow-icon'>{open.luein ? '▲' : '▼'}</span>
-        </div>
-        <div className='title-2'>
-          <span>Luein Analytics – Bengaluru, Karnataka</span>
-          <span>Oct 2024 – Jan 2025</span>
-        </div>
-        <div
-          className='description'
-          ref={lueinRef}
-          style={getStyle(lueinRef, open.luein)}
-        >
-          <ul>
-            <li>Developed and maintained a course application platform using Django and Django Rest Framework (DRF).</li>
-            <li>Built RESTful APIs, modified scraping code, and gathered data from various sources.</li>
-            <li>Worked with senior developers to design the backend and implemented frontend using Django templates, HTML, CSS, and the company’s custom framework.</li>
-            <li>Tested APIs, generated reports to optimize costs, and stored scraped data in Elasticsearch for faster retrieval.</li>
-            <li>Wrote Python scripts to convert various API JSON formats into the required structure.</li>
-          </ul>
-        </div>
-
-        {/* Celebal Technologies */}
-        <div className='title-1' onClick={() => toggle('celebal')}>
-          <span>2. React Developer Intern</span>
-          <span className='arrow-icon'>{open.celebal ? '▲' : '▼'}</span>
-        </div>
-        <div className='title-2'>
-          <span>Celebal Technologies – Jaipur, Rajasthan</span>
-          <span>June 2024 – Aug 2024</span>
-        </div>
-        <div
-          className='description'
-          ref={celebalRef}
-          style={getStyle(celebalRef, open.celebal)}
-        >
-          <ul>
-            <li>Completed weekly assigned tasks within deadlines and collaborated with fellow interns.</li>
-            <li>Attended company meetings and gained practical experience in React lifecycle methods and hooks.</li>
-            <li>Worked on routing and navigation features using React Router and JavaScript.</li>
-          </ul>
-        </div>
-      </div>
+      <div className="about-divider" >
       
+        <div className="about-left">
+          <h1 className="muted-subtitle">{heading}</h1> 
+          <p className="about-description">
+            I specialize in crafting scalable web apps with powerful backend logic and polished frontend experiences.
+            Constantly learning, adapting, and challenging the status quo — code is my craft and curiosity is my fuel.
+          </p>
+        </div>
+
+
+        <div className="about-right">
+          <h1 className="section-title"> Education</h1>
+          <div className="timeline">
+            <div className="timeline-item">
+              <div className="timeline-dot" />
+              <div className="timeline-content">
+                <h3>B.Tech - Computer Science</h3>
+                <p className="edu-score">8.5 CGPA</p>
+              </div>
+            </div>
+            <div className="timeline-item">
+              <div className="timeline-dot" />
+              <div className="timeline-content">
+                <h3>Higher Secondary (CS)</h3>
+                <p className="edu-score">84%</p>
+              </div>
+            </div>
+            <div className="timeline-item">
+              <div className="timeline-dot" />
+              <div className="timeline-content">
+                <h3>Matriculation</h3>
+                <p className="edu-score">9.2 CGPA</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
   );
 };
