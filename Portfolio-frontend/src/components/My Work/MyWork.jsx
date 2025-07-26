@@ -32,7 +32,7 @@ const MyWork = () => {
     </div>
     
       <div className='content-div'>
-        <span className='highlight'>Work Experience</span>
+        <span className='work-highlight'>Work Experience</span>
 
         {/* Luein Analytics */}
         <div className='title-1' onClick={() => toggle('luein')}>

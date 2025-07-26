@@ -63,11 +63,14 @@
   margin-bottom: 5rem;
 }
 
-.highlight {
-  background: linear-gradient(200deg, #7398e9, #00ffb3);
+.work-highlight {
+  font-size: 3rem;
+  font-weight: bold;
+  background: linear-gradient(270deg, #1E90FF, #20C997);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  display: inline-block;
   animation: dropIn 0.5s ease forwards;
 }
 
@@ -78,9 +81,13 @@
   cursor: pointer;
 }
 .title-1 span {
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: #93c5fd;
+  font-size: 1.5em;
+  font-weight: bold;
+  background: #15c4c4;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 30px;
 }
 
 .title-2 {
@@ -89,7 +96,7 @@
   margin: auto 28px;
   flex-wrap: wrap;
   margin-top: 0.3rem;
-  font-size: 0.95rem;
+  font-size: 1.2rem;
   color: #d1d5db;
   margin-bottom: 0.5rem;
 }
@@ -113,7 +120,7 @@
   list-style: disc;
   color: #e5e7eb;
   line-height: 2.2;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .arrow-icon {

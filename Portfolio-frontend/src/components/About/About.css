@@ -2,7 +2,7 @@
   width: 100%;
   max-width: 100%;
   padding-top: 10px;
-  padding-bottom: 100px;
+  padding-bottom: 150px;
   height: auto;
   display: flex;
   background-color: rgb(10, 10, 10);
@@ -34,7 +34,7 @@
   width: 40%;
   padding: 20px;
   font-size: medium;
-  margin-left: 50px;
+  margin-left: 2px;
 }
 
 .about-left h1 {
@@ -45,18 +45,17 @@
 }
 
 .about-description {
-  padding-top: 50px;
+  padding-top: 20px;
   font-size: 20px;
-  color: #ccc;
+  color: white;
 }
 
-/* ✅ Styled Right Side: */
 
 .about-right {
   width: 40%;
   padding: 20px;
   font-size: medium;
-  margin-left: 50px;
+  margin-left: 2px;
 }
 
 .about-right .section-title {
@@ -72,13 +71,13 @@
 .timeline {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 12px;
   padding-left: 20px;
 }
 
 .timeline-item {
   position: relative;
-  padding-left: 25px;
+  padding-left: 20px;
 }
 
 .timeline-dot {
@@ -96,19 +95,23 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 12px;
-  background-color: rgba(255, 255, 255, 0.03);
+  background-color: rgba(255, 255, 255, 0.05);
   padding: 14px 20px;
   border-radius: 10px;
   transition: background 0.3s ease;
 }
 
+.timeline-content h3 {
+  font-weight: normal;
+  font-size: medium;
+}
+
 .timeline-content:hover {
-  background-color: rgba(32, 201, 151, 0.1);
+  background-color: rgba(87, 139, 124, 0.8);
 }
 
 .edu-title {
-  font-size: 1.1rem;
+  font-size: 20px;
   color: #f0f0f0;
   font-weight: 500;
   flex: 1;
@@ -116,7 +119,7 @@
 }
 
 .edu-score {
-  font-size: 1rem;
+  font-size: 20px;
   color: #20C997;
   font-weight: 600;
   white-space: nowrap;
@@ -131,4 +134,51 @@
 .edu-score {
   color: #888;
   font-size: 18px;
+}
+
+
+@media screen and (max-width: 940px){
+.about-container {
+    width: 100%;
+    max-width: 100%;
+    padding-top: 10px;
+    padding-bottom: 150px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(10, 10, 10);
+  }
+  
+  .about-title-wrapper {
+    /* margin: 10px auto; */
+    padding-bottom: 50px;
+    display: flex;
+    font-size: large;
+    background: linear-gradient(120deg, #1E90FF, #20C997);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: dropIn 0.5s ease forwards;
+  }
+
+  .about-divider {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5%;
+    flex-wrap: nowrap;
+  }
+  
+  .about-left {
+    width: 84%;
+    font-size: small;
+  }
+  
+  .about-right {
+    width: 84%;
+    padding: 10px;
+    font-size: small;
+  }
 }

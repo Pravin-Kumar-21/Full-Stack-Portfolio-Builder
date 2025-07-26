@@ -60,7 +60,7 @@ const Skills = () => {
 
   return (
     <div className="skill-main">
-      <div className="heading">My Skills</div>
+      <div className="skill-heading">My Skills</div>
       <div className="sub-heading">
         Crafted through passion, honed by practice.
       </div>

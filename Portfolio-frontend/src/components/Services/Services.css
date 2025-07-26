@@ -12,7 +12,6 @@
   margin-left: 80px;
 }
 
-/* ✅ NEW CLASS for Gradient Text */
 .gradient-text {
   font-size: 3rem;
   font-weight: bold;
@@ -72,7 +71,6 @@
   animation: dropIn 0.5s ease forwards;
 }
 
-/* Glowing animated border */
 .card::before {
   content: '';
   position: absolute;
@@ -91,10 +89,10 @@
 .card::after {
   content: '';
   position: absolute;
-  top: 2px;
-  left: 2px;
-  right: 2px;
-  bottom: 2px;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
   background: inherit;
   border-radius: 9px;
   z-index: -1;
@@ -145,6 +143,4 @@
       animation: dropIn 0.5s ease forwards; 
       transition: all 0.5s ease-in-out;
     }
-  
-  
 }
