@@ -1,7 +1,6 @@
 import React from 'react'
 import './HomePage.css';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faHandPointRight } from '@fortawesome/free-solid-svg-icons';
+
 
 const HomePage = () => {
   return (

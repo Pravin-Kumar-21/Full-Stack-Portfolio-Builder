@@ -1,7 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './Navbar.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = () => {
   const [isNavVisible, setIsNavVisible] = useState(false);
@@ -32,7 +30,17 @@ const Navbar = () => {
       </div>
       <div className="navbar-links ">
         <div className="bar-btn" onClick={togglebar}>
-          <FontAwesomeIcon icon={faBars} />
+          {isNavVisible ? (
+            // X icon
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
+              <path d="M6 6L18 18M6 18L18 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+            </svg>
+          ) : (
+            // Hamburger icon
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
+              <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+            </svg>
+          )}
         </div>
         <div className={`nav-list ${isNavVisible ? 'open' : ''}`}>
           <div className='nav-btn'>Home</div>
