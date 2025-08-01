@@ -44,7 +44,7 @@ const Navbar = () => {
         </div>
         <div className={`nav-list ${isNavVisible ? 'open' : ''}`}>
           <div className='nav-btn'>Home</div>
-          <div className='nav-btn'>About Me</div>
+          <div className='nav-btn'>About</div>
           <div className='nav-btn'>Services</div>
           <div className='nav-btn'>Experiences</div>
           <div className='nav-btn'>Skills</div>

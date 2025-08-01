@@ -1,42 +1,32 @@
-// import { useLoader } from "./context/LoaderContext";
-import React from 'react'
-import './App.css';
+import React, { lazy, Suspense } from 'react';
 import Navbar from './components/Navbar/Navbar.jsx';
-import HomePage from './components/HomePage/HomePage.jsx';
-import MyWork from './components/My Work/MyWork.jsx';
-import Services from './components/Services/Services.jsx';
-import Skills from './components/Skills/Skills.jsx';
-import Project from './components/Projects/Projects.jsx'
-import About from './components/About/About.jsx';
-import Contact from './components/Contact/Contact.jsx'
+import withDynamicLoader from './hooks/withDynamicLoader.jsx';
+import { LoaderProvider } from './context/LoaderContext';
 
+// Lazy-load components wrapped with dynamic loader
+const HomePage = withDynamicLoader(lazy(() => import('./components/HomePage/HomePage.jsx')));
+const About = withDynamicLoader(lazy(() => import('./components/About/About.jsx')));
+const Services = withDynamicLoader(lazy(() => import('./components/Services/Services.jsx')));
+const Work = withDynamicLoader(lazy(() => import('./components/My Work/MyWork.jsx')));
+const Skills = withDynamicLoader(lazy(() => import('./components/Skills/Skills.jsx')));
+const Projects = withDynamicLoader(lazy(() => import('./components/Projects/Projects.jsx')));
+const Contact = withDynamicLoader(lazy(() => import('./components/Contact/Contact.jsx')));
 
-function App() {
-  // const { startLoader, stopLoader } = useLoader();
-
-  // const handleClick = () => {
-  //   startLoader({ loader: "ring", background: "true" });
-
-  //   setTimeout(() => {
-  //     stopLoader();
-  //   }, 9000); // stops after 9 seconds
-  // };
-  
-  
-
+export default function App() {
   return (
-    <div>
-      {/* <button onClick={handleClick}>Show Loader</button> */}
-      <Navbar/>
-      <HomePage/>
-      <About/>
-      <Services/>
-      <MyWork />
-      <Skills/>
-      <Project/>
-      <Contact/>
-    </div>
+    <LoaderProvider>
+      <div className="App">
+        <Navbar />
+
+        {/* Each component loads separately with its own loader */}
+        <Suspense fallback={null}><HomePage /></Suspense>
+        <Suspense fallback={null}><About /></Suspense>
+        <Suspense fallback={null}><Services /></Suspense>
+        <Suspense fallback={null}><Work /></Suspense>
+        <Suspense fallback={null}><Skills /></Suspense>
+        <Suspense fallback={null}><Projects /></Suspense>
+        <Suspense fallback={null}><Contact /></Suspense>
+      </div>
+    </LoaderProvider>
   );
 }
-
-export default App;

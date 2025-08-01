@@ -3,38 +3,41 @@ import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import "./Skills.css";
 
-const mockLangIcons = [
-  {
-    id: 1,
-    lang_name: "JavaScript",
-    icon: "https://cdn-icons-png.flaticon.com/512/5968/5968292.png",
-    exp_level: "Expert",
-  },
-  {
-    id: 2,
-    lang_name: "Python",
-    icon: "https://cdn-icons-png.flaticon.com/512/5968/5968350.png",
-    exp_level: "Expert",
-  },
-  {
-    id: 3,
-    lang_name: "React",
-    icon: "https://cdn-icons-png.flaticon.com/512/1126/1126012.png",
-    exp_level: "Intermediate",
-  },
-  {
-    id: 4,
-    lang_name: "Django",
-    icon: "https://cdn-icons-png.flaticon.com/512/5968/5968705.png",
-    exp_level: "Intermediate",
-  },
-  {
-    id: 5,
-    lang_name: "PostgreSQL",
-    icon: "https://cdn-icons-png.flaticon.com/512/5968/5968342.png",
-    exp_level: "Beginner",
-  },
-];
+const mockLangIcons = []
+
+// const mockLangIcons = [
+//   {
+//     id: 1,
+//     lang_name: "JavaScript",
+//     icon: "https://cdn-icons-png.flaticon.com/512/5968/5968292.png",
+//     exp_level: "Expert",
+//   },
+//   {
+//     id: 2,
+//     lang_name: "Python",
+//     icon: "https://cdn-icons-png.flaticon.com/512/5968/5968350.png",
+//     exp_level: "Expert",
+//   },
+//   {
+//     id: 3,
+//     lang_name: "React",
+//     icon: "https://cdn-icons-png.flaticon.com/512/1126/1126012.png",
+//     exp_level: "Intermediate",
+//   },
+//   {
+//     id: 4,
+//     lang_name: "Django",
+//     icon: "https://cdn-icons-png.flaticon.com/512/5968/5968705.png",
+//     exp_level: "Intermediate",
+//   },
+//   {
+//     id: 5,
+//     lang_name: "PostgreSQL",
+//     icon: "https://cdn-icons-png.flaticon.com/512/5968/5968342.png",
+//     exp_level: "Beginner",
+//   },
+// ];
+
 
 const Skills = () => {
   const [icons] = useState(mockLangIcons);

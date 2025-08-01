@@ -1,7 +1,5 @@
 import React from 'react'
 import './HomePage.css';
-
-
 const HomePage = () => {
   return (
     <div className='homepage'>
@@ -43,7 +41,7 @@ const HomePage = () => {
       </div>
       
       <div className='user-avatar'>
-        <img src="/IMG_20220418_223644.jpg" alt="User Avatar" />
+        <img src="/IMG_20220418_223644-min.jpg" alt="User Avatar" />
       </div>
       
     </div>
