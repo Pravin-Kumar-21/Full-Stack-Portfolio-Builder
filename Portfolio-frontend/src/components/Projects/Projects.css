@@ -10,6 +10,8 @@
   flex-direction: column;
 }
 .project-heading{
+  width: 400px;
+  max-width: 60%;
   margin:20px 60px; 
   padding-bottom: 60px;
   font-size: large;
