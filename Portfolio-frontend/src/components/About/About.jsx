@@ -27,6 +27,7 @@ const About = () => {
   },[]); 
 
   return (
+    <section id='about'> 
     <div className="about-container">
       <div className="about-title-wrapper">
         <h1 className="about-title">About Me</h1>
@@ -72,6 +73,7 @@ const About = () => {
 
       </div>
     </div>
+    </section>
   );
 };
 

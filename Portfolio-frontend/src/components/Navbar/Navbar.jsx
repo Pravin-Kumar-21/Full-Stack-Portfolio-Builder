@@ -22,6 +22,16 @@ const Navbar = () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, []);
+  
+const  ScrolltoSection = (id) =>{
+  const section = document.getElementById(id)
+  if(section){
+    const yOffset = -50; // 40px above the section
+    const y = section.getBoundingClientRect().top + window.scrollY + yOffset;
+    window.scrollTo({ top: y, behavior: 'smooth' });
+    setIsNavVisible(false); 
+  }
+}
 
   return (
     <div className="navbar" ref={navRef}>
@@ -43,13 +53,13 @@ const Navbar = () => {
           )}
         </div>
         <div className={`nav-list ${isNavVisible ? 'open' : ''}`}>
-          <div className='nav-btn'>Home</div>
-          <div className='nav-btn'>About</div>
-          <div className='nav-btn'>Services</div>
-          <div className='nav-btn'>Experiences</div>
-          <div className='nav-btn'>Skills</div>
-          <div className='nav-btn'>Projects</div>
-          <div className='nav-btn'>Contact</div>
+          <div className='nav-btn' onClick={() => ScrolltoSection('homepage')}  >Home</div>
+          <div className='nav-btn' onClick={() => ScrolltoSection('about')}  >About</div>
+          <div className='nav-btn' onClick={() => ScrolltoSection('service')}  >Services</div>
+          <div className='nav-btn' onClick={() => ScrolltoSection('mywork')}  >Experiences</div>
+          <div className='nav-btn' onClick={() => ScrolltoSection('skills')}  >Skills</div>
+          <div className='nav-btn' onClick={() => ScrolltoSection('project')}  >Projects</div>
+          <div className='nav-btn' onClick={() => ScrolltoSection('contact')}  >Contact</div>
         </div>
       </div>
     </div>

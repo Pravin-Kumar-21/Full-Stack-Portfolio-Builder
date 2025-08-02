@@ -17,7 +17,6 @@ export default function App() {
     <LoaderProvider>
       <div className="App">
         <Navbar />
-
         {/* Each component loads separately with its own loader */}
         <Suspense fallback={null}><HomePage /></Suspense>
         <Suspense fallback={null}><About /></Suspense>

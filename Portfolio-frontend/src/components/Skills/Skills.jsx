@@ -62,27 +62,29 @@ const Skills = () => {
   ));
 
   return (
-    <div className="skill-main">
-      <div className="skill-heading">My Skills</div>
-      <div className="sub-heading">
-        Crafted through passion, honed by practice.
-      </div>
+    <section id="skills">
+      <div className="skill-main">
+        <div className="skill-heading">My Skills</div>
+        <div className="sub-heading">
+          Crafted through passion, honed by practice.
+        </div>
 
-      <div className="lang-carousel">
-        <AliceCarousel
-          infinite
-          autoPlay
-          autoPlayInterval={2000}
-          disableButtonsControls
-          disableDotsControls
-          mouseTracking
-          animationDuration={800}
-          animationType="fadeout"
-          items={items}
-          responsive={responsive}
-        />
+        <div className="lang-carousel">
+          <AliceCarousel
+            infinite
+            autoPlay
+            autoPlayInterval={2000}
+            disableButtonsControls
+            disableDotsControls
+            mouseTracking
+            animationDuration={800}
+            animationType="fadeout"
+            items={items}
+            responsive={responsive}
+          />
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

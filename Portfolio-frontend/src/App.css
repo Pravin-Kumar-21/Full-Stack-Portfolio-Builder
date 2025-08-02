@@ -3,7 +3,7 @@
   width: 100%;
   max-width: 100%;
   margin: 0 auto;
-  padding: auto;
+  padding: 20px;
 }
 
 .logo {
@@ -28,6 +28,7 @@
     transform: rotate(360deg);
   }
 }
+
 
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {

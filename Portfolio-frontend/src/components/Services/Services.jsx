@@ -3,6 +3,7 @@ import './Services.css';
 
 const Services = () => {
   return (
+    <section id='service'>
     <div className='service-main'>
       <div className='service-heading'>
         <h1 className='gradient-text'>Services</h1>
@@ -20,6 +21,7 @@ const Services = () => {
         </div>
       </div>
     </div>
+    </section>
   );
 }
 
