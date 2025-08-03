@@ -12,7 +12,6 @@ class HomepageSerializer(serializers.ModelSerializer):
             "avatar_img",
             "paragraph",
             "HireMe_link",
-            "Resume_link",
         ]
 
 
@@ -21,7 +20,7 @@ class AboutSerializer(serializers.ModelSerializer):
         model = models.About
         fields = [
             "Heading",
-            "subheading",
+            "domain_display",
             "description",
         ]
 
@@ -91,4 +90,40 @@ class WorkExperienceSerializers(serializers.ModelSerializer):
             "start_date"
             "end_date",
             "description",
+            "Resume_link",
         ]
+
+
+class EducationDetailsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.EducationDetails
+        fields = [
+            "degree",
+            "institution",
+            "start_date",
+            "end_date",
+            "marks_scored",
+        ]
+        
+        
+class ProjectPhotosSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.ProjectPhotos
+        fields = [
+            "project",
+            "image_name",
+            "image_url",
+        ]
+
+
+class VisitorContactDetailSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.VisitorContactDetail
+        fields = [
+            "name",
+            "email",
+            "subject",
+            "message",
+        ]
+        
+

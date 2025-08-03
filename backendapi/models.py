@@ -3,7 +3,7 @@ from ckeditor.fields import RichTextField
 
 
 class Homepage(models.Model):
-    intro = models.CharField(
+    intro = models.CharField( 
         max_length=100, blank=True, null=True, verbose_name="User Introduction"
     )
     name = models.CharField(
@@ -17,7 +17,7 @@ class Homepage(models.Model):
         max_length=100, blank=True, null=True, verbose_name="Google Drive Image Id"
     )
     HireMe_link = models.CharField(max_length=100, blank=True, null=True)
-    Resume_link = models.URLField(blank=True, null=True)
+    
 
     def __str__(self):
         return self.name
@@ -27,20 +27,29 @@ class Homepage(models.Model):
 
 
 class About(models.Model):
-    Heading = models.CharField(
-        max_length=100,
-        blank=True,
-    )
-    subheading = models.CharField(max_length=100, blank=True)
     description = RichTextField(
         blank=True, null=True, verbose_name="Brief Explanation about yourself"
     )
 
     def __str__(self) -> str:
-        return self.Heading
+        return self.description[:20] 
 
     class Meta:
         verbose_name_plural = "About Me"
+
+
+class EducationDetails(models.Model):
+    degree = models.CharField(max_length=100, blank=True, null=True)
+    priority = models.IntegerField(blank=True, null=True, verbose_name="Priority" ,help_text="shows the order of education details")
+    start_date = models.DateField(blank=True, null=True)
+    end_date = models.DateField(blank=True, null=True)
+    marks_scored = models.TextField(blank=True, null=True)
+
+    def __str__(self):
+        return self.degree
+
+    class Meta:
+        verbose_name_plural = "Education Details"
 
 
 class ServicesOffred(models.Model):
@@ -87,13 +96,15 @@ class Project(models.Model):
     about_avatar = models.CharField(
         max_length=100, blank=True, null=True, verbose_name="Google Drive Image Id"
     )
+    priority = models.IntegerField(
+        blank=True, null=True, verbose_name="Priority", help_text="shows the order of projects"
+    )
     updated_on = models.DateTimeField(
         auto_now_add=False, null=True, auto_now=True, blank=True
     )
     Project_title = models.CharField(max_length=90, blank=True, null=True)
     Project_info = models.TextField(blank=True, null=True)
     project_link = models.URLField(blank=True, null=True)
-    video_link = models.URLField(blank=True, null=True)
 
     def __str__(self):
         return self.Project_title
@@ -143,9 +154,43 @@ class WorkExperience(models.Model):
     start_date = models.DateField(blank=True, null=True)
     end_date = models.DateField(blank=True, null=True)
     description = RichTextField(blank=True, null=True)
+    resume_link = models.URLField(blank=True, null=True)
 
     def __str__(self):
         return self.company_name
 
     class Meta:
         verbose_name_plural = "Work Experience"
+
+
+class ProjectPhotos(models.Model):
+  
+    project = models.ForeignKey(
+        Project, on_delete=models.CASCADE, related_name="project_photos"
+    )
+    image_name = models.CharField(max_length=100, blank=True, null=True)
+    image_url = models.CharField(
+        max_length=100, blank=True, null=True, verbose_name="Google Drive Image Id"
+    )
+
+    def __str__(self):
+        return f"Photo for {self.project.Project_title}"
+
+    class Meta:
+        verbose_name_plural = "Project Photos"
+        
+        
+
+class VisitorContactDetail(models.Model):
+    name = models.CharField(max_length=100, blank=True, null=True)
+    email = models.EmailField(blank=True, null=True)
+    subject = models.CharField(max_length=200, blank=True, null=True)
+    message = models.TextField(blank=True, null=True)
+
+    def __str__(self):
+        return f"Contact Form from {self.name}"
+
+    class Meta:
+        verbose_name_plural = "Contact Form Submissions"
+        
+        

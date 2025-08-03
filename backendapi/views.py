@@ -42,3 +42,21 @@ class MycontactApi(generics.ListAPIView):
 class MyWorkExperienceAPI(generics.ListAPIView):
     queryset = models.WorkExperience.objects.all()
     serializer_class = serializers.WorkExperienceSerializers
+
+
+class EducationDetailsApi(generics.ListAPIView):
+    queryset = models.EducationDetails.objects.all()
+    serializer_class = serializers.EducationDetailsSerializer
+    
+    
+class ProjectPhotosApi(generics.ListAPIView):
+    queryset = models.ProjectPhotos.objects.all()
+    serializer_class = serializers.ProjectPhotosSerializer
+    
+
+class VisitorContactMeApi(generics.ListCreateAPIView):
+    queryset = models.VisitorContactDetail.objects.all()
+    serializer_class = serializers.VisitorContactDetailSerializer
+
+    def perform_create(self, serializer):
+        serializer.save()
