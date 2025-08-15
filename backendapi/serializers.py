@@ -8,6 +8,7 @@ class HomepageSerializer(serializers.ModelSerializer):
         fields = [
             "name",
             "intro",
+            "subcaption",
             "job_title",
             "avatar_img",
             "paragraph",
@@ -19,8 +20,6 @@ class AboutSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.About
         fields = [
-            "Heading",
-            "domain_display",
             "description",
         ]
 
@@ -56,7 +55,7 @@ class ProjectSerializer(serializers.ModelSerializer):
             "Project_title",
             "Project_info",
             "project_link",
-            "video_link",
+            "priority",
         ]
 
 
@@ -83,14 +82,14 @@ class SocialMediaLinksSerializer(serializers.ModelSerializer):
 class WorkExperienceSerializers(serializers.ModelSerializer):
 
     class Meta:
-        models = models.WorkExperience
-        feilds = [
+        model = models.WorkExperience
+        fields = [
             "company_name",
             "job_title",
-            "start_date"
+            "start_date",
             "end_date",
             "description",
-            "Resume_link",
+            "resume_link",
         ]
 
 
@@ -99,7 +98,6 @@ class EducationDetailsSerializer(serializers.ModelSerializer):
         model = models.EducationDetails
         fields = [
             "degree",
-            "institution",
             "start_date",
             "end_date",
             "marks_scored",

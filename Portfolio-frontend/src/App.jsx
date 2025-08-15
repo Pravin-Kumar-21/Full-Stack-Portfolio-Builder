@@ -1,7 +1,10 @@
-import React, { lazy, Suspense } from 'react';
+import React, { lazy, Suspense ,useEffect } from 'react';
 import Navbar from './components/Navbar/Navbar.jsx';
 import withDynamicLoader from './hooks/withDynamicLoader.jsx';
 import { LoaderProvider } from './context/LoaderContext';
+import WebSocketHandler from './context/AppContext.jsx';
+import { fetchAllData } from './context/fetchAllData.js';
+
 
 // Lazy-load components wrapped with dynamic loader
 const HomePage = withDynamicLoader(lazy(() => import('./components/HomePage/HomePage.jsx')));
@@ -13,8 +16,19 @@ const Projects = withDynamicLoader(lazy(() => import('./components/Projects/Proj
 const Contact = withDynamicLoader(lazy(() => import('./components/Contact/Contact.jsx')));
 
 export default function App() {
+  
+  useEffect(() => {
+    fetchAllData().then(data => console.log("Fetched Data:", data));
+  }, []);
+
+  
+  
+  
   return (
+    
     <LoaderProvider>
+    <WebSocketHandler onDataChanged={fetchAllData} />
+    
       <div className="App">
         <Navbar />
         {/* Each component loads separately with its own loader */}

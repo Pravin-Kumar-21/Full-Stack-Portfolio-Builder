@@ -6,6 +6,9 @@ class Homepage(models.Model):
     intro = models.CharField( 
         max_length=100, blank=True, null=True, verbose_name="User Introduction"
     )
+    subcaption = models.CharField(
+        max_length=100, blank=True, null=True, verbose_name="Subcaption"
+    )
     name = models.CharField(
         max_length=100, blank=True, null=True, verbose_name="Full Name"
     )
@@ -43,7 +46,7 @@ class EducationDetails(models.Model):
     priority = models.IntegerField(blank=True, null=True, verbose_name="Priority" ,help_text="shows the order of education details")
     start_date = models.DateField(blank=True, null=True)
     end_date = models.DateField(blank=True, null=True)
-    marks_scored = models.TextField(blank=True, null=True)
+    marks_scored = models.CharField(max_length=20, blank=True, null=True)
 
     def __str__(self):
         return self.degree
