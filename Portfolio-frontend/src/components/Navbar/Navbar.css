@@ -31,7 +31,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-right: 8px;
+  padding-right: 16px;
 }
 
 .nav-list {
@@ -59,9 +59,6 @@
   cursor: pointer;
 }
 
-.nav-btn:nth-child(7){
-  /* margin-right: 10px; */
-}
 
 
 .nav-btn:hover {

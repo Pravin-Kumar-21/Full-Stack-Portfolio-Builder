@@ -9,17 +9,19 @@ const HomePage = () => {
         <div className='intro'>
         
           <div className='intro-name'>
-            <h1><span className='highlight'>Hello! I’m Pravin Kumar </span></h1>
-            <h2>Turning Ideas into Web Experiences</h2>
-            <p>Full-Stack Engineer with strong experience in developing and deploying scalable web apps. Proficient in backend
-              development with Django, DjangoRestFramework, seamlessly integrating front-end tech like HTML, Django
-              templates, CSS, and Tailwind CSS. Skilled in React for smooth front-end and backend interaction. Adept at
-              designing robust Python APIs, optimizing performance, and enhancing UX. Hands-on with Elasticsearch, API
-              testing via Postman, and exploring machine learning. Proven ability to deliver innovative, high-quality, and
-              scalable solutions</p>
-            <button className="btn-gradient">
-              HIRE ME
-            </button>
+          <div className='flex-rev'>
+              <h1><span className='highlight'>Hello! I’m Pravin Kumar </span></h1>
+              <h2>Turning Ideas into Web Experiences</h2>
+              <p>Full-Stack Engineer with strong experience in developing and deploying scalable web apps. Proficient in backend
+                development with Django, DjangoRestFramework, seamlessly integrating front-end tech like HTML, Django
+                templates, CSS, and Tailwind CSS. Skilled in React for smooth front-end and backend interaction. Adept at
+                designing robust Python APIs, optimizing performance, and enhancing UX. Hands-on with Elasticsearch, API
+                testing via Postman, and exploring machine learning. Proven ability to deliver innovative, high-quality, and
+                scalable solutions</p>
+              <button className="btn-gradient">
+                HIRE ME
+              </button>
+          </div>
           </div>
           
           

@@ -127,6 +127,34 @@
   }
 }
 
+
+@media screen and (min-width: 940px) and (max-width: 1369px) {
+  
+  .homepage{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 20px auto;
+    align-items: center;
+    text-align: center;
+    /* justify-content: center; */
+  }
+  .intro{
+    width: 90%;
+    max-width: 90%;
+    padding: 20px 0;
+  }
+  
+  .user-avatar{
+    display: none;
+  }
+  
+}
+
+
+
 @media screen and (max-width: 940px) {
   .homepage {
     width: 100%;
@@ -139,7 +167,7 @@
 
   .intro {
     width: 100%;
-    margin: 4px;
+    margin: 10px 0px;
   }
 
   .intro-name h1 {
