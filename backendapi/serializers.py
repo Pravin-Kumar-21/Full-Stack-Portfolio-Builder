@@ -21,6 +21,7 @@ class AboutSerializer(serializers.ModelSerializer):
         model = models.About
         fields = [
             "description",
+            "floating_captions",
         ]
 
 

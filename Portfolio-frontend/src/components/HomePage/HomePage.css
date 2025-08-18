@@ -1,15 +1,16 @@
 .homepage {
   width: 100%;
   margin-top: 75px;
-  padding: 20px auto;
+  padding: 10px auto;
   padding-bottom: 100px;
   justify-content: space-between;
   display: flex;
   background-color: rgb(20, 20, 20);
   z-index: 500;
   transition: all 0.5s ease-in-out;
-  
+
 }
+
 
 .intro {
   width: 50%;
@@ -29,7 +30,6 @@
 }
 
 .intro-name h1 {
-  font-size: 60px;
   color: white;
   line-height: 1.1em;
   animation: dropIn 0.5s ease forwards;
@@ -38,7 +38,7 @@
 
 .intro-name p {
   margin-top: 75px;
-  font-size: 22px;
+  font-size: 20px;
   line-height: 2.0em;
   color: white;
   animation: dropIn 0.5s ease forwards;
@@ -56,7 +56,7 @@
   text-align: center;
   border: none;
   border-radius: 44px;
-  background: linear-gradient(135deg, #20C997 , #1E90FF);
+  background: linear-gradient(135deg, #20C997, #1E90FF);
   background-size: 200% 200%;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease, background-position 0.5s ease;
@@ -65,17 +65,38 @@
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
+.btn-gradient a {
+  color: white;
+}
+
 .btn-gradient:hover {
   transform: scale(1.08);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
   background-position: right center;
 }
 
+
+
 .social-links {
+  height: auto;
   display: flex;
   flex-direction: column;
-  margin-top: 20px;
+  margin-top: 40px;
+  font-size: 16px;
   animation: fadeUp 0.5s ease-out forwards;
+}
+
+.icon-link{
+  width: 100px;
+  font-size: 44px;
+  margin-right: 20px;
+  color:white;
+}
+
+.icon-link:hover {
+  transform: scale(1.1);
+  transition: all 0.5s ease-in-out;
+  color: #bfc5c4;
 }
 
 .user-avatar {
@@ -127,34 +148,6 @@
   }
 }
 
-
-@media screen and (min-width: 940px) and (max-width: 1369px) {
-  
-  .homepage{
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    padding: 20px auto;
-    align-items: center;
-    text-align: center;
-    /* justify-content: center; */
-  }
-  .intro{
-    width: 90%;
-    max-width: 90%;
-    padding: 20px 0;
-  }
-  
-  .user-avatar{
-    display: none;
-  }
-  
-}
-
-
-
 @media screen and (max-width: 940px) {
   .homepage {
     width: 100%;
@@ -166,17 +159,17 @@
   }
 
   .intro {
-    width: 100%;
-    margin: 10px 0px;
+    width: 96%;
+    margin: 4px auto;
   }
 
   .intro-name h1 {
-    font-size: 50px;
+    font-size: 36px;
     line-height: 1.2em;
   }
 
   .intro-name p {
-    font-size: 20px;
+    font-size: 16px;
     margin: 10px 30px;
     margin-top: 200px;
     align-items: center;
@@ -191,42 +184,12 @@
     justify-content: center;
   }
 
-    .user-avatar {
-      width: 150px;
-      height: 150px;
-      margin-bottom: 10px;
-      position: absolute;
-      top:200px;
-      justify-content: center;
-      transform: translateX(auto);
-      border-radius: 50%;
-      border: 2px solid #1E90FF;
-      /* background-color: white; */
-      padding: 3px;
-      box-sizing: border-box;
-      animation: fadeUp 0.5s ease-out forwards;
-      transition: all 0.5s ease-in-out;
-    }
-  
-    .user-avatar img {
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      object-fit: cover;
-      display: block;
-      animation: dropIn 0.5s ease forwards;
-      transition: all 0.4s ease-in-out;
-    }
-}
-
-
-@media screen and (max-width: 545px){
-.user-avatar {
+  .user-avatar {
     width: 150px;
     height: 150px;
     margin-bottom: 10px;
     position: absolute;
-    top: 250px;
+    top: 180px;
     justify-content: center;
     transform: translateX(auto);
     border-radius: 50%;
@@ -237,4 +200,34 @@
     animation: fadeUp 0.5s ease-out forwards;
     transition: all 0.5s ease-in-out;
   }
+
+  .user-avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    animation: dropIn 0.5s ease forwards;
+    transition: all 0.4s ease-in-out;
+  }
+}
+
+
+@media screen and (max-width: 444px) {
+  .user-avatar {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+    position: absolute;
+    top: 240px;
+    justify-content: center;
+    transform: translateX(auto);
+    border-radius: 50%;
+    border: 2px solid #1E90FF;
+    /* background-color: white; */
+    padding: 3px;
+    box-sizing: border-box;
+    animation: fadeUp 0.5s ease-out forwards;
+    transition: all 0.5s ease-in-out;
+  } 
 }

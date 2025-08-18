@@ -30,9 +30,11 @@ class Homepage(models.Model):
 
 
 class About(models.Model):
-    description = RichTextField(
-        blank=True, null=True, verbose_name="Brief Explanation about yourself"
+    floating_captions= models.JSONField(blank=True,default=[] , verbose_name="Floating Captions", help_text="Enter the Floating Captions You want to display just like an array in python")
+    description = models.CharField(
+        max_length=500, blank=True, null=True, verbose_name="Brief Explanation about yourself"
     )
+    
 
     def __str__(self) -> str:
         return self.description[:20] 
