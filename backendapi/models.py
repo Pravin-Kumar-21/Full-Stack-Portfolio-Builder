@@ -34,6 +34,7 @@ class About(models.Model):
     description = models.CharField(
         max_length=500, blank=True, null=True, verbose_name="Brief Explanation about yourself"
     )
+    resume_link = models.URLField(blank=True, null=True)
     
 
     def __str__(self) -> str:
@@ -159,7 +160,6 @@ class WorkExperience(models.Model):
     start_date = models.DateField(blank=True, null=True)
     end_date = models.DateField(blank=True, null=True)
     description = RichTextField(blank=True, null=True)
-    resume_link = models.URLField(blank=True, null=True)
 
     def __str__(self):
         return self.company_name

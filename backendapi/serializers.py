@@ -22,6 +22,7 @@ class AboutSerializer(serializers.ModelSerializer):
         fields = [
             "description",
             "floating_captions",
+            "resume_link",
         ]
 
 
@@ -90,7 +91,6 @@ class WorkExperienceSerializers(serializers.ModelSerializer):
             "start_date",
             "end_date",
             "description",
-            "resume_link",
         ]
 
 

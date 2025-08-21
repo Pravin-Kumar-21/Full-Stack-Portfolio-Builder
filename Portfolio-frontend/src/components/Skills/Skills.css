@@ -7,10 +7,12 @@
   background: rgba(10,10, 10, 0.8);
   align-items: center;
   padding-bottom: 100px;
+  row-gap: 10px;
+  column-gap: 10px;
 }
 
 .skill-heading {
-  font-size: 48px;
+  font-size: 3rem;
   font-weight: bold;
   background: linear-gradient(270deg, #7398e9, #00ffb3);
   -webkit-background-clip: text;
@@ -21,21 +23,20 @@
 
 .sub-heading {
   margin-bottom: 20px;
-  font-size: x-large;
+  font-size: 18px;
   text-align: center;
 }
 
 .lang-carousel {
   width: 100%;
   max-width: 100%;
-  margin: 0px 20px;
-  padding: 80px 0px ;
+  height: auto;
 }
 
 .mylang {
   background: #1e1e1e;
   padding: 24px;
-  margin: 10px;
+  margin: 5px;
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
   color: #fff;
@@ -61,9 +62,10 @@
 
 .lang-img img {
   width: 60px;
-  height: 60px;
-  object-fit: contain;
+  height: auto;
+  object-fit: cover;
   margin-bottom: 10px;
+  
 }
 
 .lang-info h3 {

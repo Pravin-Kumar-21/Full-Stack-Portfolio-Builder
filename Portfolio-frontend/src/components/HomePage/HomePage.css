@@ -2,7 +2,7 @@
   width: 100%;
   margin-top: 75px;
   padding: 10px auto;
-  padding-bottom: 100px;
+  padding-bottom: 140px;
   justify-content: space-between;
   display: flex;
   background-color: rgb(20, 20, 20);
@@ -156,6 +156,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding-bottom: 50px;
   }
 
   .intro {
@@ -169,7 +170,7 @@
   }
 
   .intro-name p {
-    font-size: 16px;
+    font-size: 18px;
     margin: 10px 30px;
     margin-top: 200px;
     align-items: center;
@@ -214,6 +215,9 @@
 
 
 @media screen and (max-width: 444px) {
+  .homepage{
+    padding-bottom: 50px;
+  }
   .user-avatar {
     width: 150px;
     height: 150px;

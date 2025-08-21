@@ -58,7 +58,7 @@ const About = ({ about = {}, education = [] }) => {
                 <div className="timeline-item" key={index}>
                   <div className="timeline-dot" />
                   <div className="timeline-content">
-                    <h3>{edu.degree} {edu.years && `(${edu.years})`}</h3>
+                    <h3>{edu.degree} <span> {edu.years && `(${edu.years})`}</span></h3>
                     <p className="edu-score">{edu.grade}</p>
                   </div>
                 </div>

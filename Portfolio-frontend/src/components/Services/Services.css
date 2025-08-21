@@ -10,7 +10,7 @@
 
 .service-heading {
   margin: 20px 0px;
-  margin-left: 20px;
+  margin-left: 60px;
 }
 
 .gradient-text {
@@ -28,7 +28,7 @@
   font-size: 24px;
   margin: 20px auto;
   padding: 20px 20px;
-  margin-bottom: 10px;
+  margin-bottom: 40px;
   color: white;
   animation: fadeUp 0.5s ease-out forwards;
 }
@@ -45,7 +45,8 @@
   flex-direction: row;
   flex-wrap: wrap;
   column-gap: 40px;
-  row-gap: 40px;
+  row-gap: 20px;
+  transition: all 0.5s ease-in-out;
 }
 .card-div .card-img{
   width: 80px;
@@ -93,7 +94,7 @@
   background: linear-gradient(60deg, #2af598, #009efd, #2af598, #0072ff), radial-gradient(circle at top left, rgba(255, 255, 255, 0.3), transparent);
   background-blend-mode: screen;
   background-size: 300% 300%;
-  animation: glowMove 6s linear infinite;
+  animation: glowMove 3s linear infinite;
   z-index: -1;
   border-radius: 10px;
   filter: blur(4px);
@@ -137,6 +138,15 @@
       display: flex;
       flex-direction:column;
       flex-wrap: wrap;
+      transition: all 0.5s ease-in-out;
+    }
+    .sub-head {
+      font-size: 18px;
+      margin: 10px auto;
+      padding: 20px 20px;
+      margin-bottom: 5px;
+      color: white;
+      animation: fadeUp 0.5s ease-out forwards;
       transition: all 0.5s ease-in-out;
     }
   

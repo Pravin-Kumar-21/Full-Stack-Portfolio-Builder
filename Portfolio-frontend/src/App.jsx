@@ -78,7 +78,10 @@ export default function App() {
         </Suspense>
 
         <Suspense fallback={null}>
-          <Work work={data.work} />
+          <Work 
+            work={data.work}
+            about={data.about}  
+          />
         </Suspense>
 
         <Suspense fallback={null}>
@@ -86,7 +89,10 @@ export default function App() {
         </Suspense>
 
         <Suspense fallback={null}>
-          <Projects projects={data.projects} />
+          <Projects 
+            projects={data.projects}
+            
+          />
         </Suspense>
 
         <Suspense fallback={null}>
