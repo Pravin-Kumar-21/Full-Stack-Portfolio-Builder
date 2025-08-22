@@ -2,6 +2,9 @@ import React from 'react'
 import './Projects.css'
 
 const Mywork = ({ projects = [] }) => {
+  // Sort projects by priority (lower = higher priority)
+  const sortedProjects = [...projects].sort((a, b) => a.priority - b.priority)
+
   return (
     <section id='project'>
       <div className='project-main'>
@@ -10,7 +13,7 @@ const Mywork = ({ projects = [] }) => {
         </div>
 
         <div className='project-container'>
-          {projects.map((proj, index) => (
+          {sortedProjects.map((proj, index) => (
             <div className='project-card' key={index}>
               <div className='card-content'>
 
