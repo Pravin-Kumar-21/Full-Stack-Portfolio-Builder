@@ -7,7 +7,7 @@ const Contact = () => {
       <div className='contact-main'>
         <div className='contact-heading'>Contact Me</div>
         <div className='sub-heading'>Your trusted one-stop hub for tech solutions</div>
-        <form className='contact-container'>
+        <form className='contact-container' name='contact-me'>
           <div className='section-1'>
             <input type='text' placeholder='Your Name' required />
             <input type='email' placeholder='Your Email' required />
@@ -24,5 +24,6 @@ const Contact = () => {
     </section>
   );
 };
+
 
 export default Contact;

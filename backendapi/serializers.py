@@ -47,7 +47,21 @@ class LanguageiconSerializer(serializers.ModelSerializer):
         ]
 
 
+
+class ProjectPhotosSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.ProjectPhotos
+        fields = [
+            "project",
+            "image_name",
+            "image_url",
+        ]
+
+
+
 class ProjectSerializer(serializers.ModelSerializer):
+
+    project_photos = ProjectPhotosSerializer(many=True, read_only=True)
     class Meta:
         model = models.Project
         fields = [
@@ -58,6 +72,7 @@ class ProjectSerializer(serializers.ModelSerializer):
             "Project_info",
             "project_link",
             "priority",
+            "project_photos",
         ]
 
 
@@ -105,15 +120,6 @@ class EducationDetailsSerializer(serializers.ModelSerializer):
         ]
         
         
-class ProjectPhotosSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = models.ProjectPhotos
-        fields = [
-            "project",
-            "image_name",
-            "image_url",
-        ]
-
 
 class VisitorContactDetailSerializer(serializers.ModelSerializer):
     class Meta:

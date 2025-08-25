@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import './Projects.css'
 
 const Mywork = ({ projects = [] }) => {
   // Sort projects by priority (lower = higher priority)
   const sortedProjects = [...projects].sort((a, b) => a.priority - b.priority)
+  
+  
+  
 
   return (
     <section id='project'>
@@ -18,11 +21,9 @@ const Mywork = ({ projects = [] }) => {
               <div className='card-content'>
 
                 <div className='card-image'>
-                  {proj.about_avatar ? (
-                    <img src={proj.about_avatar} alt={proj.Project_title} />
-                  ) : (
-                    <img src="/default-project.png" alt="default" />
-                  )}
+                    {proj.project_photos && proj.project_photos.length > 0 && (
+                      <ImageSlider photos={proj.project_photos} />
+                    )}
                 </div>
 
                 <div className='card-text'>
@@ -30,16 +31,18 @@ const Mywork = ({ projects = [] }) => {
                     <div className='project-title'>{proj.Project_title}</div>
 
                     <div className='project-link'>
-                      <div className='logo'>
-                        <i className='fa-brands fa-github'></i>
-                      </div>
-                      <div>Source Code</div>
+                      <a href={proj.project_link} target="_blank" rel="noopener noreferrer">
+                        <div className='logo'>
+                          <i className='fa-brands fa-github'></i>
+                        </div>
+                        <div>Source Code</div>
+                      </a>
                     </div>
                   </div>
 
                   <p>{proj.Project_info}</p>
                   <div className='project-languages'>
-                    <strong>Tech Stack:</strong>{proj.language_used}
+                    <strong>Tech Stack:</strong> {proj.language_used}
                   </div>
                 </div>
 
@@ -51,5 +54,34 @@ const Mywork = ({ projects = [] }) => {
     </section>
   )
 }
+
+const ImageSlider = ({ photos }) => {
+  const [current, setCurrent] = useState(0)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent(prev => (prev + 1) % photos.length)
+    }, 5000) // change every 5s
+    return () => clearInterval(interval)
+  }, [photos.length])
+
+  const getDriveUrl = (id) => {
+    return `https://lh3.googleusercontent.com/d/${id}=w1000?authuser=0`
+  }
+
+  return (
+    <div className="slider">
+      {photos.map((photo, index) => (
+        <img
+          key={index}
+          src={getDriveUrl(photo.image_url)}
+          alt={`slide-${index}`}
+          className={`slider-img ${index === current ? "active" : ""}`}
+        />
+      ))}
+    </div>
+  )
+}
+
 
 export default Mywork
