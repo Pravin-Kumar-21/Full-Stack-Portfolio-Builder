@@ -76,16 +76,6 @@ class ProjectSerializer(serializers.ModelSerializer):
         ]
 
 
-class MyContactSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = models.MyContact
-        fields = [
-            "icon",
-            "contact_info",
-            "contact_name",
-        ]
-
-
 class SocialMediaLinksSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.SocialMediaLinks

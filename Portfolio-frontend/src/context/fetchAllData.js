@@ -8,12 +8,10 @@ export async function fetchAllData() {
       "languages",
       "projects",
       "social",
-      "connectme",
       "services",
       "work-experience",
       "education-details",
       "project-photos",
-      "contactme",
     ];
 
     const requests = endpoints.map(endpoint =>

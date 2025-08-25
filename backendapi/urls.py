@@ -7,7 +7,6 @@ urlpatterns = [
     path("languages/", views.LanguageApi.as_view(), name="langauges"),
     path("projects/", views.ProjectsApi.as_view(), name="project"),
     path("social/", views.SocialMediaLinkApi.as_view(), name="social"),
-    path("connectme/", views.MycontactApi.as_view(), name="contact"),
     path("services/", views.ServiceApi.as_view(), name="service"),
     path(
         "work-experience/",

@@ -14,7 +14,6 @@ MODEL_NAMES = [
     "ServicesOffred",
     "LanguagesIcons",
     "Project",
-    "MyContact",
     "SocialMediaLinks",
     "WorkExperience",
     "ProjectPhotos",

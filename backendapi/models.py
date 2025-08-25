@@ -35,6 +35,7 @@ class About(models.Model):
         max_length=500, blank=True, null=True, verbose_name="Brief Explanation about yourself"
     )
     resume_link = models.URLField(blank=True, null=True)
+    my_email_id = models.EmailField(blank=True, null=True)
     
 
     def __str__(self) -> str:
@@ -117,27 +118,6 @@ class Project(models.Model):
 
     class Meta:
         verbose_name_plural = "Projects Section"
-
-
-class MyContact(models.Model):
-    icon = models.CharField(
-        max_length=90, blank=True, null=True, verbose_name="Icon (eg: fa -fa-twitter)"
-    )
-    contact_info = models.CharField(
-        max_length=100,
-        blank=True,
-        null=True,
-        verbose_name="Contact Info (eg: johndoe2@gmail.com)",
-    )
-    contact_name = models.CharField(
-        max_length=30, blank=True, null=True, verbose_name="Contact Name (eg: twitter)"
-    )
-
-    def __str__(self):
-        return self.contact_name
-
-    class Meta:
-        verbose_name_plural = "Contacts Section"
 
 
 class SocialMediaLinks(models.Model):

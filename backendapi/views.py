@@ -1,5 +1,8 @@
 from django.shortcuts import render
 from rest_framework import generics
+from django.core.mail import send_mail
+
+from portfolio import settings
 from . import serializers
 from . import models
 
@@ -34,10 +37,6 @@ class SocialMediaLinkApi(generics.ListAPIView):
     serializer_class = serializers.SocialMediaLinksSerializer
 
 
-class MycontactApi(generics.ListAPIView):
-    queryset = models.MyContact.objects.all()
-    serializer_class = serializers.MyContactSerializer
-
 
 class MyWorkExperienceAPI(generics.ListAPIView):
     queryset = models.WorkExperience.objects.all()
@@ -59,4 +58,20 @@ class VisitorContactMeApi(generics.ListCreateAPIView):
     serializer_class = serializers.VisitorContactDetailSerializer
 
     def perform_create(self, serializer):
-        serializer.save()
+        instance = serializer.save()
+        user_email = models.About.objects.get(id=1).my_email_id
+
+        send_mail(
+            subject=f"📩 New Contact Form Submission from {instance.name}",
+            message=f"""
+You have a new contact form submission:
+
+Name: {instance.name}
+Email: {instance.email}
+Subject: {instance.subject}
+Message: {instance.message}
+""",
+            from_email=settings.DEFAULT_FROM_EMAIL, 
+            recipient_list=[user_email],
+            fail_silently=False,
+        )
