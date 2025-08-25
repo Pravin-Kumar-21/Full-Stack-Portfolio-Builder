@@ -36,7 +36,7 @@ const  ScrolltoSection = (id) =>{
   return (
     <div className="navbar" ref={navRef}>
       <div className="navbar-logo">
-        <h1>Full Stack Developer {'<'}<span className='blink'>/</span>{'>'} </h1>
+        <h2>Full Stack Developer {'<'}<span className='blink'>/</span>{'>'} </h2>
       </div>
       <div className="navbar-links ">
         <div className="bar-btn" onClick={togglebar}>

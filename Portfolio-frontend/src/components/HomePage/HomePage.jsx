@@ -1,53 +1,59 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 import './HomePage.css';
-const HomePage = () => {
+
+const HomePage = ({ home = {}, social = [] }) => {
+  const [homeData, setHomeData] = useState(home);
+  const [socialData, setSocialData] = useState(social);
+
+  // Update state whenever props change (like when API fetch gives new data)
+  useEffect(() => {
+    setHomeData(home);
+  }, [home]);
+
+  useEffect(() => {
+    setSocialData(social);
+  }, [social]);
+
   return (
     <section id='homepage'>
-      
       <div className='homepage'>
-      
         <div className='intro'>
-        
           <div className='intro-name'>
-            <h1><span className='highlight'>Hello! I’m Pravin Kumar </span></h1>
-            <h2>Turning Ideas into Web Experiences</h2>
-            <p>Full-Stack Engineer with strong experience in developing and deploying scalable web apps. Proficient in backend
-              development with Django, DjangoRestFramework, seamlessly integrating front-end tech like HTML, Django
-              templates, CSS, and Tailwind CSS. Skilled in React for smooth front-end and backend interaction. Adept at
-              designing robust Python APIs, optimizing performance, and enhancing UX. Hands-on with Elasticsearch, API
-              testing via Postman, and exploring machine learning. Proven ability to deliver innovative, high-quality, and
-              scalable solutions</p>
-            <button className="btn-gradient">
-              HIRE ME
-            </button>
+            <h1><span className='highlight'>Hello! I’m {homeData.name} </span></h1>
+            <h2>{homeData.subcaption}</h2>
+            <p>{homeData.paragraph}</p>
+            <a href={homeData.HireMe_link}>
+              <button className="btn-gradient">HIRE ME</button>
+            </a>
           </div>
-          
-          
+
           <div className='social-links'>
-          
             <div className='head-text'>Follow Me</div>
-              <br></br>
-              <div className="icon-links">
+            <br />
+            <div className="icon-links">
+              {socialData.map((platform, index) => (
                 <a
-                  href="#"
+                  key={index}
+                  href={platform.link}
                   className="icon-link"
                   target="_blank"
                   rel="noopener noreferrer"
+                  title={platform.name}
                 >
-                  <i className="">Icon</i>
+                  <i className={platform.social_icon}></i>
                 </a>
-              </div>
-            
+              ))}
+            </div>
           </div>
-          
         </div>
-        
+
         <div className='user-avatar'>
           <img src="/IMG_20220418_223644-min.jpg" alt="User Avatar" />
         </div>
-        
       </div>
     </section>
-  )
-}
+  );
+};
+
 export default HomePage;
+

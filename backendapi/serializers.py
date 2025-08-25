@@ -8,11 +8,11 @@ class HomepageSerializer(serializers.ModelSerializer):
         fields = [
             "name",
             "intro",
+            "subcaption",
             "job_title",
             "avatar_img",
             "paragraph",
             "HireMe_link",
-            "Resume_link",
         ]
 
 
@@ -20,9 +20,9 @@ class AboutSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.About
         fields = [
-            "Heading",
-            "subheading",
             "description",
+            "floating_captions",
+            "resume_link",
         ]
 
 
@@ -47,7 +47,21 @@ class LanguageiconSerializer(serializers.ModelSerializer):
         ]
 
 
+
+class ProjectPhotosSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.ProjectPhotos
+        fields = [
+            "project",
+            "image_name",
+            "image_url",
+        ]
+
+
+
 class ProjectSerializer(serializers.ModelSerializer):
+
+    project_photos = ProjectPhotosSerializer(many=True, read_only=True)
     class Meta:
         model = models.Project
         fields = [
@@ -57,17 +71,8 @@ class ProjectSerializer(serializers.ModelSerializer):
             "Project_title",
             "Project_info",
             "project_link",
-            "video_link",
-        ]
-
-
-class MyContactSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = models.MyContact
-        fields = [
-            "icon",
-            "contact_info",
-            "contact_name",
+            "priority",
+            "project_photos",
         ]
 
 
@@ -84,11 +89,36 @@ class SocialMediaLinksSerializer(serializers.ModelSerializer):
 class WorkExperienceSerializers(serializers.ModelSerializer):
 
     class Meta:
-        models = models.WorkExperience
-        feilds = [
+        model = models.WorkExperience
+        fields = [
             "company_name",
             "job_title",
-            "start_date"
+            "start_date",
             "end_date",
             "description",
         ]
+
+
+class EducationDetailsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.EducationDetails
+        fields = [
+            "degree",
+            "start_date",
+            "end_date",
+            "marks_scored",
+        ]
+        
+        
+
+class VisitorContactDetailSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.VisitorContactDetail
+        fields = [
+            "name",
+            "email",
+            "subject",
+            "message",
+        ]
+        
+
