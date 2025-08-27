@@ -18,7 +18,7 @@ const Contact = withDynamicLoader(lazy(() => import('./components/Contact/Contac
 
 export default function App() {
   const [data, setData] = useState({
-    home: { name: '', intro: '', job_title: '' },
+    home: { name: '', intro: '', job_title: '' , asset_id: ''},
     social: [],
     about: { description: '' },
     services: [],
@@ -57,7 +57,9 @@ export default function App() {
     <LoaderProvider>
       <WebSocketHandler onDataChanged={fetchAllData} />
       <div className="App">
-        <Navbar />
+        <Navbar 
+          home={data.home}
+        />
 
         <Suspense fallback={null}>
           <HomePage
@@ -79,6 +81,7 @@ export default function App() {
 
         <Suspense fallback={null}>
           <Work 
+            home={data.home}
             work={data.work}
             about={data.about}  
           />

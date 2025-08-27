@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './Navbar.css';
 
-const Navbar = () => {
+const Navbar = ({home = {}}) => {
   const [isNavVisible, setIsNavVisible] = useState(false);
   const navRef = useRef(null);
 
@@ -36,7 +36,7 @@ const  ScrolltoSection = (id) =>{
   return (
     <div className="navbar" ref={navRef}>
       <div className="navbar-logo">
-        <h2>Full Stack Developer {'<'}<span className='blink'>/</span>{'>'} </h2>
+        <h2>{home.job_title} {'<'}<span className='blink'>/</span>{'>'} </h2>
       </div>
       <div className="navbar-links ">
         <div className="bar-btn" onClick={togglebar}>

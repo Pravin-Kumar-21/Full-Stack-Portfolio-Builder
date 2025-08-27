@@ -13,6 +13,7 @@ class HomepageSerializer(serializers.ModelSerializer):
             "avatar_img",
             "paragraph",
             "HireMe_link",
+            "asset_id"
         ]
 
 
