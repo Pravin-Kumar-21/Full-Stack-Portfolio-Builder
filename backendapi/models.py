@@ -21,7 +21,7 @@ class Homepage(models.Model):
     )
     HireMe_link = models.CharField(max_length=100, blank=True, null=True)
     
-    asset_id = models.CharField(max_length=100, blank=True, null=True)
+    asset_id = models.CharField(max_length=100, blank=True, null=True ,default="")
 
     def __str__(self):
         return self.name

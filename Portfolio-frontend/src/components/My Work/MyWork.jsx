@@ -3,24 +3,29 @@ import './MyWork.css';
 
 
 const work_type_img_or_gif = (asset_id) => {
-  return `https://lh3.googleusercontent.com/d/${asset_id}=w1000?authuser=0`;
+  const asset_url = `https://lh3.googleusercontent.com/d/${asset_id}=w1000?authuser=0`;
+  return asset_url
 };
 
 
-const MyWork = ({ work , about = [], home = [] } ) => {
+const MyWork = ({ work , about = [], home ={} } ) => {
+  
+  
   const [open, setOpen] = useState({});
-
+  
   const refs = useRef({});
-
+  
   const toggle = (key) => {
     setOpen((prev) => ({ ...prev, [key]: !prev[key] }));
   };
+  
 
+    
   const getStyle = (ref, isOpen) => ({
     maxHeight: isOpen ? `${ref?.scrollHeight}px` : '0px',
     opacity: isOpen ? 1 : 0,
   });
-
+  
   return (
     <section id='mywork'>
       <div className='work-main'>
