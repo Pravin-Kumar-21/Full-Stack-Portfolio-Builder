@@ -15,6 +15,7 @@ const Work = withDynamicLoader(lazy(() => import('./components/My Work/MyWork.js
 const Skills = withDynamicLoader(lazy(() => import('./components/Skills/Skills.jsx')));
 const Projects = withDynamicLoader(lazy(() => import('./components/Projects/Projects.jsx')));
 const Contact = withDynamicLoader(lazy(() => import('./components/Contact/Contact.jsx')));
+const Footer = withDynamicLoader(lazy(() => import('./components/Footer/Footer.jsx')));
 
 export default function App() {
   const [data, setData] = useState({
@@ -100,6 +101,11 @@ export default function App() {
 
         <Suspense fallback={null}>
           <Contact contact={data.contact} />
+        </Suspense>
+        
+        
+        <Suspense fallback={null}>
+          <Footer/>
         </Suspense>
       </div>
     </LoaderProvider>
