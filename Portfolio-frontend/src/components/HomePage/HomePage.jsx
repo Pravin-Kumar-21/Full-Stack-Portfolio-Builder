@@ -1,6 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import './HomePage.css';
 
+
+// const get_user_image_url(img_id) => {
+//   user_img_url = `https://lh3.googleusercontent.com/d/${img_id}=w1000?authuser=0`
+//   return user_img_url;
+// }
+
+const get_user_image_url = (img_id) => {
+  const user_img_url = `https://lh3.googleusercontent.com/d/${img_id}=w1000?authuser=0`;
+  return user_img_url;
+};
+
+
 const HomePage = ({ home = {}, social = [] }) => {
   const [homeData, setHomeData] = useState(home);
   const [socialData, setSocialData] = useState(social);
@@ -13,7 +25,8 @@ const HomePage = ({ home = {}, social = [] }) => {
   useEffect(() => {
     setSocialData(social);
   }, [social]);
-
+  
+  
   return (
     <section id='homepage'>
       <div className='homepage'>
@@ -48,7 +61,7 @@ const HomePage = ({ home = {}, social = [] }) => {
         </div>
 
         <div className='user-avatar'>
-          <img src="/IMG_20220418_223644-min.jpg" alt="User Avatar" />
+          <img src={get_user_image_url(homeData.avatar_img)}  alt="User Avatar" />
         </div>
       </div>
     </section>

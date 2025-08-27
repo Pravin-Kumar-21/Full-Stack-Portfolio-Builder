@@ -70,6 +70,7 @@ export default function App() {
           <About
             about={data.about}
             education={data.education}
+            home = {data.home}
           />
         </Suspense>
 

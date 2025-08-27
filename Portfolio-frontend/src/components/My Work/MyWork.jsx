@@ -1,7 +1,13 @@
 import React, { useRef, useState } from 'react';
 import './MyWork.css';
 
-const MyWork = ({ work , about = []}) => {
+
+const work_type_img_or_gif = (asset_id) => {
+  return `https://lh3.googleusercontent.com/d/${asset_id}=w1000?authuser=0`;
+};
+
+
+const MyWork = ({ work , about = [], home = [] } ) => {
   const [open, setOpen] = useState({});
 
   const refs = useRef({});
@@ -22,7 +28,7 @@ const MyWork = ({ work , about = []}) => {
         {/* Left Side */}
         <div className='left-block'>
           <div className='img-div'>
-            <img src="./code for life.gif" alt="User Avatar" />
+            <img src={work_type_img_or_gif(home.asset_id)} alt="User Avatar" />
           </div>
           <div className='download-div'>
           <a href={about.resume_link}>

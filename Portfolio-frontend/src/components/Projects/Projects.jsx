@@ -61,7 +61,7 @@ const ImageSlider = ({ photos }) => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent(prev => (prev + 1) % photos.length)
-    }, 5000) // change every 5s
+    }, 2000)
     return () => clearInterval(interval)
   }, [photos.length])
 
