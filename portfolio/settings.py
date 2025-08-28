@@ -34,9 +34,16 @@ SECRET_KEY = env('DJANGO_SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["127.0.0.1", "localhost"]
-CSRF_TRUSTED_ORIGINS = ["http://127.0.0.1:3000", "http://localhost:3000"]
+ALLOWED_HOSTS = ["127.0.0.1", "localhost", "full-stack-portfolio-builder.onrender.com"]
 
+CSRF_TRUSTED_ORIGINS = [
+    "http://127.0.0.1:3000",
+    "http://localhost:3000",
+    "https://full-stack-portfolio-builder.onrender.com",
+    "https://full-stack-portfolio-builder.vercel.app/"
+]
+
+  
 # If using channels
 ASGI_APPLICATION = "portfolio.asgi.application"
 

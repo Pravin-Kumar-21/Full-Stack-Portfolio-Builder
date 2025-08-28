@@ -13,9 +13,11 @@ export async function fetchAllData() {
       "education-details",
       "project-photos",
     ];
+    
+    const VITE_API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://127.0.0.1:8000";
 
     const requests = endpoints.map(endpoint =>
-      axios.get(`http://127.0.0.1:8000/api/${endpoint}/`)
+      axios.get(`${VITE_API_BASE_URL}/api/${endpoint}/`)
     );
 
     const responses = await Promise.all(requests);
