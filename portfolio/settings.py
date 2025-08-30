@@ -13,7 +13,6 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 from pathlib import Path
 import environ
 import os
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 
 
@@ -32,7 +31,7 @@ env = environ.Env()
 SECRET_KEY = env('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["127.0.0.1", "localhost", "full-stack-portfolio-builder.onrender.com"]
 
@@ -40,8 +39,9 @@ CSRF_TRUSTED_ORIGINS = [
     "http://127.0.0.1:3000",
     "http://localhost:3000",
     "https://full-stack-portfolio-builder.onrender.com",
-    "https://full-stack-portfolio-builder.vercel.app/"
+    "https://full-stack-portfolio-builder.vercel.app",
 ]
+
 
   
 # If using channels
@@ -71,15 +71,14 @@ INSTALLED_APPS = [
 
 ASGI_APPLICATION = "portfolio.asgi.application"
 
+# settings.py
 
 CHANNEL_LAYERS = {
     "default": {
-        "BACKEND": "channels_redis.core.RedisChannelLayer",
-        "CONFIG": {
-            "hosts": [("127.0.0.1", 6379)],
-        },
+        "BACKEND": "channels.layers.InMemoryChannelLayer",
     },
 }
+
 
 MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware",
