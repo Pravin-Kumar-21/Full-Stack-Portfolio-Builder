@@ -128,28 +128,28 @@ WSGI_APPLICATION = "portfolio.wsgi.application"
 # }
 
 
-# DATABASES = {
-#     "default": {
-#         "ENGINE": "django.db.backends.postgresql",
-#         "NAME": env("NAME"),
-#         "USER": env("USER"),
-#         "PASSWORD": env("PASSWORD"),
-#         "HOST": env("HOST"),
-#         "PORT": env("PORT"),
-#         "OPTIONS": {
-#             "sslmode": "require",   #  AWS RDS enforces SSL
-#         },
-#     }
-# }
-
-
 DATABASES = {
-    "default": dj_database_url.config(
-        default=env("DATABASE_URL"),
-        conn_max_age=600,
-        ssl_require=True
-    )
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": env("NAME"),
+        "USER": env("USER"),
+        "PASSWORD": env("PASSWORD"),
+        "HOST": env("HOST"),
+        "PORT": env("PORT"),
+        "OPTIONS": {
+            "sslmode": "require",   #  AWS RDS enforces SSL
+        },
+    }
 }
+
+
+# DATABASES = {
+#     "default": dj_database_url.config(
+#         default=env("DATABASE_URL"),
+#         conn_max_age=600,
+#         ssl_require=True
+#     )
+# }
 
 
 
