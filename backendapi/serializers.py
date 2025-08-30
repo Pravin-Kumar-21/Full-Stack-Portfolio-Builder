@@ -67,7 +67,6 @@ class ProjectSerializer(serializers.ModelSerializer):
         model = models.Project
         fields = [
             "language_used",
-            "about_avatar",
             "updated_on",
             "Project_title",
             "Project_info",
