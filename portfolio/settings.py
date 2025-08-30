@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
+import dj_database_url
 import environ
 import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -127,19 +128,30 @@ WSGI_APPLICATION = "portfolio.wsgi.application"
 # }
 
 
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.postgresql",
+#         "NAME": env("NAME"),
+#         "USER": env("USER"),
+#         "PASSWORD": env("PASSWORD"),
+#         "HOST": env("HOST"),
+#         "PORT": env("PORT"),
+#         "OPTIONS": {
+#             "sslmode": "require",   #  AWS RDS enforces SSL
+#         },
+#     }
+# }
+
+
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": env("NAME"),
-        "USER": env("USER"),
-        "PASSWORD": env("PASSWORD"),
-        "HOST": env("HOST"),
-        "PORT": env("PORT"),
-        "OPTIONS": {
-            "sslmode": "require",   #  AWS RDS enforces SSL
-        },
-    }
+    "default": dj_database_url.config(
+        default=env("DATABASE_URL"),
+        conn_max_age=600,
+        ssl_require=True
+    )
 }
+
+
 
 
 # Password validation
