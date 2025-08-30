@@ -9,7 +9,7 @@ media
 migrations/
 # Backup files # 
 *.bak 
-
+datadump.json
 # If you are using PyCharm # 
 # User-specific stuff
 .idea/**/workspace.xml
