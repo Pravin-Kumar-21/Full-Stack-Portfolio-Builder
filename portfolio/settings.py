@@ -120,27 +120,27 @@ WSGI_APPLICATION = "portfolio.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-# DATABASES = {
-#     "default": {
-#         "ENGINE": "django.db.backends.sqlite3",
-#         "NAME": BASE_DIR/'db.sqlite3',
-#     }
-# }
-
-
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": env("NAME"),
-        "USER": env("USER"),
-        "PASSWORD": env("PASSWORD"),
-        "HOST": env("HOST"),
-        "PORT": env("PORT"),
-        "OPTIONS": {
-            "sslmode": "require",   #  AWS RDS enforces SSL
-        },
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR/'db.sqlite3',
     }
 }
+
+
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.postgresql",
+#         "NAME": env("NAME"),
+#         "USER": env("USER"),
+#         "PASSWORD": env("PASSWORD"),
+#         "HOST": env("HOST"),
+#         "PORT": env("PORT"),
+#         "OPTIONS": {
+#             "sslmode": "require",   #  AWS RDS enforces SSL
+#         },
+#     }
+# }
 
 
 # Password validation
@@ -189,6 +189,6 @@ EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST = "smtp.gmail.com"
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = env('EMAIL_HOST_USER')  
-EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')  
+EMAIL_HOST_USER = env('EMAIL_HOST_USER')  # <- your email address
+EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')  # <- app password without spaces
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER

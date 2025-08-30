@@ -7,10 +7,6 @@ import './HomePage.css';
 //   return user_img_url;
 // }
 
-const get_user_image_url = (img_id) => {
-  const user_img_url = `https://lh3.googleusercontent.com/d/${img_id}=w1000?authuser=0`;
-  return user_img_url;
-};
 
 
 const HomePage = ({ home = {}, social = [] }) => {
@@ -61,7 +57,7 @@ const HomePage = ({ home = {}, social = [] }) => {
         </div>
 
         <div className='user-avatar'>
-          <img src={get_user_image_url(homeData.avatar_img)}  alt="User Avatar" />
+          <img src={homeData.avatar_img}  alt="User Avatar" />
         </div>
       </div>
     </section>

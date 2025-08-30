@@ -65,16 +65,14 @@ const ImageSlider = ({ photos }) => {
     return () => clearInterval(interval)
   }, [photos.length])
 
-  const getDriveUrl = (id) => {
-    return `https://lh3.googleusercontent.com/d/${id}=w1000?authuser=0`
-  }
+
 
   return (
     <div className="slider">
       {photos.map((photo, index) => (
         <img
           key={index}
-          src={getDriveUrl(photo.image_url)}
+          src={photo.image_url}
           alt={`slide-${index}`}
           className={`slider-img ${index === current ? "active" : ""}`}
         />

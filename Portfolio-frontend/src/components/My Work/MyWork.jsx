@@ -2,10 +2,10 @@ import React, { useRef, useState } from 'react';
 import './MyWork.css';
 
 
-const work_type_img_or_gif = (asset_id) => {
-  const asset_url = `https://lh3.googleusercontent.com/d/${asset_id}=w1000?authuser=0`;
-  return asset_url
-};
+// const work_type_img_or_gif = (asset_id) => {
+//   const asset_url = `https://lh3.googleusercontent.com/d/${asset_id}=w1000?authuser=0`;
+//   return asset_url
+// };
 
 
 const MyWork = ({ work , about = [], home ={} } ) => {
@@ -33,7 +33,7 @@ const MyWork = ({ work , about = [], home ={} } ) => {
         {/* Left Side */}
         <div className='left-block'>
           <div className='img-div'>
-            <img src={work_type_img_or_gif(home.asset_id)} alt="User Avatar" />
+            <img src={home.asset_id} alt="User Work Image" />
           </div>
           <div className='download-div'>
           <a href={about.resume_link}>

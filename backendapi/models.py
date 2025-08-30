@@ -17,11 +17,11 @@ class Homepage(models.Model):
     )
     paragraph = models.TextField(blank=True, null=True, verbose_name="Introduction")
     avatar_img = models.CharField(
-        max_length=100, blank=True, null=True, verbose_name="Google Drive Image Id"
+        max_length=500, blank=True, null=True, verbose_name="s3 Bucket Image url"
     )
     HireMe_link = models.CharField(max_length=100, blank=True, null=True)
     
-    asset_id = models.CharField(max_length=100, blank=True, null=True ,default="")
+    asset_id = models.CharField(max_length=500, blank=True, null=True ,default="")
 
     def __str__(self):
         return self.name
@@ -62,7 +62,7 @@ class EducationDetails(models.Model):
 
 class ServicesOffred(models.Model):
     icon_image = models.CharField(
-        max_length=100, blank=True, null=True, verbose_name="Google Drive Image Id"
+        max_length=500, blank=True, null=True, verbose_name="s3 Bucket Image url"
     )
     service_name = models.CharField(max_length=40, blank=True, null=True)
     shadow_icon = models.CharField(max_length=40, blank=True, null=True)
@@ -102,7 +102,7 @@ class LanguagesIcons(models.Model):
 class Project(models.Model):
     language_used = models.CharField(max_length=100, blank=True, null=True)
     about_avatar = models.CharField(
-        max_length=100, blank=True, null=True, verbose_name="Google Drive Image Id"
+        max_length=100, blank=True, null=True, verbose_name="s3 bucket image url"
     )
     priority = models.IntegerField(
         blank=True, null=True, verbose_name="Priority", help_text="shows the order of projects"
@@ -156,7 +156,7 @@ class ProjectPhotos(models.Model):
     )
     image_name = models.CharField(max_length=100, blank=True, null=True)
     image_url = models.CharField(
-        max_length=100, blank=True, null=True, verbose_name="Google Drive Image Id"
+        max_length=500, blank=True, null=True, verbose_name="s3 bucket image url"
     )
 
     def __str__(self):
