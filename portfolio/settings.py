@@ -127,19 +127,19 @@ WSGI_APPLICATION = "portfolio.wsgi.application"
 # }
 
 
-# DATABASES = {
-#     "default": {
-#         "ENGINE": "django.db.backends.postgresql",
-#         "NAME": env("NAME"),
-#         "USER": env("USER"),
-#         "PASSWORD": env("PASSWORD"),
-#         "HOST": env("HOST"),
-#         "PORT": env("PORT"),
-#         "OPTIONS": {
-#             "sslmode": "require",   #  AWS RDS enforces SSL
-#         },
-#     }
-# }
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": env("NAME"),
+        "USER": env("USER"),
+        "PASSWORD": env("PASSWORD"),
+        "HOST": env("HOST"),
+        "PORT": env("PORT"),
+        "OPTIONS": {
+            "sslmode": "require",   
+        },
+    }
+}
 
 
 # DATABASES = {
