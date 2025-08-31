@@ -56,7 +56,6 @@ class ProjectPhotosApi(generics.ListAPIView):
 class VisitorContactMeApi(generics.CreateAPIView):
     queryset = models.VisitorContactDetail.objects.all()
     serializer_class = serializers.VisitorContactDetailSerializer
-    permission_classes = [permissions.AllowAny]  
 
     def perform_create(self, serializer):
         instance = serializer.save()
@@ -72,7 +71,7 @@ Email: {instance.email}
 Subject: {instance.subject}
 Message: {instance.message}
 """,
-            from_email=settings.DEFAULT_FROM_EMAIL,
+            from_email=settings.DEFAULT_FROM_EMAIL, 
             recipient_list=[user_email],
             fail_silently=False,
         )
