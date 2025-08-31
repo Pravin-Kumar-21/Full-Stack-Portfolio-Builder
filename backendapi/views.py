@@ -59,19 +59,24 @@ class VisitorContactMeApi(generics.CreateAPIView):
 
     def perform_create(self, serializer):
         instance = serializer.save()
-        user_email = models.About.objects.get(id=1).my_email_id
+
+        about_obj = models.About.objects.first()
+        if not about_obj:
+            raise ValueError(" No About object found in database. Please add one.")
+
+        user_email = about_obj.my_email_id
 
         send_mail(
             subject=f"📩 New Contact Form Submission from {instance.name}",
             message=f"""
-You have a new contact form submission:
+    You have a new contact form submission:
 
-Name: {instance.name}
-Email: {instance.email}
-Subject: {instance.subject}
-Message: {instance.message}
-""",
-            from_email=settings.DEFAULT_FROM_EMAIL, 
+    Name: {instance.name}
+    Email: {instance.email}
+    Subject: {instance.subject}
+    Message: {instance.message}
+    """,
+            from_email=settings.DEFAULT_FROM_EMAIL,
             recipient_list=[user_email],
             fail_silently=False,
         )
