@@ -314,7 +314,7 @@
   } 
   }
 
-@media screen  and (max-width: 444px){
+@media screen  and (max-width: 430px){
 
 .homepage {
     width: 100%;
@@ -328,7 +328,7 @@
     height: 150px;
     margin-bottom: 10px;
     position: absolute;
-    top: 240px;
+    top: 28%;
     justify-content: center;
     border-radius: 50%;
     border: 2px solid #1E90FF;
