@@ -6,8 +6,7 @@ import WebSocketHandler from './context/AppContext.jsx';
 import { fetchAllData } from './context/fetchAllData.js';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
-
-// Lazy-load components
+// Lazy-load components with dynamic loader
 const HomePage = withDynamicLoader(lazy(() => import('./components/HomePage/HomePage.jsx')));
 const About = withDynamicLoader(lazy(() => import('./components/About/About.jsx')));
 const Services = withDynamicLoader(lazy(() => import('./components/Services/Services.jsx')));
@@ -19,7 +18,7 @@ const Footer = withDynamicLoader(lazy(() => import('./components/Footer/Footer.j
 
 export default function App() {
   const [data, setData] = useState({
-    home: { name: '', intro: '', job_title: '' , asset_id: ''},
+    home: { name: '', intro: '', job_title: '', asset_id: '' },
     social: [],
     about: { description: '' },
     services: [],
@@ -29,6 +28,7 @@ export default function App() {
     contact: {},
     education: []
   });
+  const [isDataReady, setIsDataReady] = useState(false);
 
   const transformData = useCallback((apiData) => {
     return {
@@ -49,6 +49,7 @@ export default function App() {
       .then(apiData => {
         const transformed = transformData(apiData);
         setData(transformed);
+        setIsDataReady(true); // ✅ Mark data as ready
         console.log("Transformed Data:", transformed);
       })
       .catch(error => console.error("Fetch failed:", error));
@@ -58,54 +59,38 @@ export default function App() {
     <LoaderProvider>
       <WebSocketHandler onDataChanged={fetchAllData} />
       <div className="App">
-        <Navbar 
-          home={data.home}
-        />
+        <Navbar home={data.home} />
 
         <Suspense fallback={null}>
-          <HomePage
-            home={data.home}
-            social={data.social}
-          />
+          <HomePage isDataReady={isDataReady} home={data.home} social={data.social} />
         </Suspense>
 
         <Suspense fallback={null}>
-          <About
-            about={data.about}
-            education={data.education}
-          />
+          <About isDataReady={isDataReady} about={data.about} education={data.education} />
         </Suspense>
 
         <Suspense fallback={null}>
-          <Services services={data.services} />
+          <Services isDataReady={isDataReady} services={data.services} />
         </Suspense>
 
         <Suspense fallback={null}>
-          <Work 
-            home={data.home}
-            work={data.work}
-            about={data.about}  
-          />
+          <Work isDataReady={isDataReady} home={data.home} work={data.work} about={data.about} />
         </Suspense>
 
         <Suspense fallback={null}>
-          <Skills skills={data.skills} />
+          <Skills isDataReady={isDataReady} skills={data.skills} />
         </Suspense>
 
         <Suspense fallback={null}>
-          <Projects 
-            projects={data.projects}
-            
-          />
+          <Projects isDataReady={isDataReady} projects={data.projects} />
         </Suspense>
 
         <Suspense fallback={null}>
-          <Contact contact={data.contact} />
+          <Contact isDataReady={isDataReady} contact={data.contact} />
         </Suspense>
-        
-        
+
         <Suspense fallback={null}>
-          <Footer/>
+          <Footer isDataReady={isDataReady} />
         </Suspense>
       </div>
     </LoaderProvider>

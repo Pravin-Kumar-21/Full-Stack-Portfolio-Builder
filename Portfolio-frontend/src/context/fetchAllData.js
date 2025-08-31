@@ -1,7 +1,10 @@
+// fetchAllData.js
 import axios from 'axios';
 
-export async function fetchAllData() {
+export async function fetchAllData(startLoader, stopLoader) {
   try {
+    if (startLoader) startLoader();
+
     const endpoints = [
       "home",
       "about",
@@ -13,7 +16,7 @@ export async function fetchAllData() {
       "education-details",
       "project-photos",
     ];
-    
+
     const VITE_API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://127.0.0.1:8000";
 
     const requests = endpoints.map(endpoint =>
@@ -28,11 +31,11 @@ export async function fetchAllData() {
     }, {});
 
     console.log("✅ All data fetched:", result);
-
-    // You can store `result` in context or return it
     return result;
   } catch (error) {
     console.error("❌ Error fetching all data:", error);
     return null;
+  } finally {
+    if (stopLoader) stopLoader();
   }
 }

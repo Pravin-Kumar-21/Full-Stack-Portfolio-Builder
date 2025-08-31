@@ -2,41 +2,37 @@ import React, { useEffect, useState } from 'react';
 import { useLoader } from '../context/LoaderContext';
 
 export default function withDynamicLoader(WrappedComponent) {
-  return function LoaderWrappedComponent(props) {
+  return function LoaderWrappedComponent({ isDataReady, ...props }) {
     const { startLoader, stopLoader } = useLoader();
-    const [show, setShow] = useState(false);
+    const [isComponentReady, setIsComponentReady] = useState(false);
+    const [shouldShow, setShouldShow] = useState(false);
 
     useEffect(() => {
       let isMounted = true;
-      let timeoutId;
 
-      const load = async () => {
-        try {
-          await startLoader(); // Load assets and show loader
-          if (!isMounted) return;
+      const loadComponent = async () => {
+        await startLoader(); // Show loader
+        if (!isMounted) return;
 
-          // Show the component after short artificial delay (optional)
-          timeoutId = setTimeout(() => {
-            if (!isMounted) return;
-            setShow(true);
-            stopLoader(); // Stop loader after component is shown
-          }, 500);
-        } catch (err) {
-          console.error("Dynamic loader failed:", err);
-          setShow(true); // Fail-safe: still show component
-          stopLoader();
-        }
+        setIsComponentReady(true); // Component is lazy-loaded
       };
 
-      load();
+      loadComponent();
 
       return () => {
         isMounted = false;
-        clearTimeout(timeoutId);
-        stopLoader(); // Cleanup loader on unmount
+        stopLoader();
       };
     }, []);
 
-    return show ? <WrappedComponent {...props} /> : null;
+    // 🚀 Combine both conditions: component + data
+    useEffect(() => {
+      if (isComponentReady && isDataReady) {
+        setShouldShow(true);
+        stopLoader(); // Stop loader only when BOTH are ready
+      }
+    }, [isComponentReady, isDataReady, stopLoader]);
+
+    return shouldShow ? <WrappedComponent {...props} /> : null;
   };
 }

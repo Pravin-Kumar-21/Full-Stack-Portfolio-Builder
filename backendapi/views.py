@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from rest_framework import generics
+from rest_framework import generics, permissions
 from django.core.mail import send_mail
 
 from portfolio import settings
@@ -53,9 +53,10 @@ class ProjectPhotosApi(generics.ListAPIView):
     serializer_class = serializers.ProjectPhotosSerializer
     
 
-class VisitorContactMeApi(generics.ListCreateAPIView):
+class VisitorContactMeApi(generics.CreateAPIView):
     queryset = models.VisitorContactDetail.objects.all()
     serializer_class = serializers.VisitorContactDetailSerializer
+    permission_classes = [permissions.AllowAny]  
 
     def perform_create(self, serializer):
         instance = serializer.save()
@@ -71,7 +72,7 @@ Email: {instance.email}
 Subject: {instance.subject}
 Message: {instance.message}
 """,
-            from_email=settings.DEFAULT_FROM_EMAIL, 
+            from_email=settings.DEFAULT_FROM_EMAIL,
             recipient_list=[user_email],
             fail_silently=False,
         )

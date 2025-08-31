@@ -12,7 +12,7 @@ const Contact = () => {
     message: ''
   });
   const [status, setStatus] = useState('');
-  const { startLoader, stopLoader } = useDynamicLoader();  // ✅ use hook
+  const { startLoader, stopLoader } = useDynamicLoader();  
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -22,16 +22,17 @@ const Contact = () => {
     e.preventDefault();
     setStatus('');
 
-    // ✅ show loader before request
+    
     await startLoader();
 
     try {
-      const response = await fetch(`${API_BASE_URL}/api/contactme/`, {
+      const response = await fetch(`${API_BASE_URL}api/contactme/`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
       });
 
+      console.log(`${API_BASE_URL}`)
       if (response.ok) {
         setStatus('✅ Message sent successfully!');
         setFormData({ name: '', email: '', subject: '', message: '' });
@@ -42,7 +43,6 @@ const Contact = () => {
       console.error('Error:', error);
       setStatus('⚠️ Something went wrong.');
     } finally {
-      // ✅ stop loader after request
       await stopLoader();
     }
   };
