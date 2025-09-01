@@ -40,7 +40,7 @@ const Mywork = ({ projects = [] }) => {
                     </div>
                   </div>
 
-                  <p>{proj.Project_info}</p>
+                  <p>{proj.Project_info}  </p>
                   <div className='project-languages'>
                     <strong>Tech Stack:</strong> {proj.language_used}
                   </div>

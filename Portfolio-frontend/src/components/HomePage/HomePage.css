@@ -53,6 +53,7 @@
   margin: 0px 80px;
   font-size: 20px;
   text-align: left;
+  color: white;
   line-height: 2.2;
   animation: dropIn 0.5s ease forwards;
   transition: all 0.5s ease-in-out;
@@ -177,65 +178,6 @@
 }
 
 
-
-
-
-.intro {
-  width: 50%;
-  max-width: 100%;
-  height: 100%;
-  margin: 10px 80px;
-  transition: all 0.5s ease-in-out;
-  animation: dropIn 0.5s ease forwards;
-}
-
-.highlight {
-  background: linear-gradient(120deg, #1E90FF, #20C997);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: dropIn 0.5s ease forwards;
-}
-
-.intro-name h1 {
-  color: white;
-  font-size: 60px;
-  line-height: 1.1em;
-  animation: dropIn 0.5s ease forwards;
-  transition: all 0.4s ease-in-out;
-}
-
-.intro-name p {
-  margin-top: 75px;
-  font-size: 20px;
-  line-height: 2.0em;
-  color: white;
-  animation: dropIn 0.5s ease forwards;
-  transition: all 0.4s ease-in-out;
-}
-
-
-.user-avatar {
-  width: 600px;
-  height: 500px;
-  margin: 75px 40px;
-  padding: 2px;
-  border-radius: 12px;
-  box-sizing: border-box;
-  animation: fadeUp 0.5s ease-out forwards;
-  transition: all 0.5s ease-in-out;
-}
-
-.user-avatar img {
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  object-fit: cover;
-  display: block;
-  animation: dropIn 0.5s ease forwards;
-  transition: all 0.4s ease-in-out;
-}
-
 @keyframes fadeUp {
   0% {
     opacity: 0;
@@ -303,6 +245,7 @@
   font-size: 20px;
   text-align: center;
   line-height: 2.2;
+  color: white;
   animation: dropIn 0.5s ease forwards;
   transition: all 0.5s ease-in-out;
 }
@@ -398,6 +341,7 @@
     font-size: 18px;
     line-height: 2.0;
     text-align: center;
+    color: white;
     animation: dropIn 0.5s ease forwards;
     transition: all 0.5s ease-in-out;
   }
