@@ -94,6 +94,7 @@
   color: #fff;
   font-weight: 600;
   font-size: 20px;
+  align-items: center;
   text-align: center;
   border: none;
   border-radius: 44px;
@@ -367,7 +368,7 @@
   }
   
   .hire-btn {
-    width: 80%;
+    width: 60%;
     margin: 20px auto;
     display: flex;
     align-items: center;

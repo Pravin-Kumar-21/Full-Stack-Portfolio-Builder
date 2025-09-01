@@ -43,13 +43,11 @@ const HomePage = ({ home = {}, social = [] }) => {
         
         <div className='hire-btn'>
           <button className="btn-gradient"
-            onClick={() =>
-              window.open(
-                'https://mail.google.com/mail/u/0/?fs=1&to=pravinkumar2108@gmail.com&tf=cm',
-                '_blank'
-              )
-            }
-          >HIRE ME
+          ><a
+            href={homeData.HireMe_link}
+          >
+          HIRE ME
+          </a>
           </button>
         </div>
         
