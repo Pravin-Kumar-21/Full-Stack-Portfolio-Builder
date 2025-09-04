@@ -33,14 +33,21 @@ SECRET_KEY = env('DJANGO_SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["127.0.0.1", "localhost", "full-stack-portfolio-builder.onrender.com"]
+ALLOWED_HOSTS = [
+    "127.0.0.1",
+    "localhost",
+    "api.pravinkumardev.site",   
+]
 
 CSRF_TRUSTED_ORIGINS = [
     "http://127.0.0.1:3000",
     "http://localhost:3000",
-    "https://full-stack-portfolio-builder.onrender.com",
     "https://full-stack-portfolio-builder.vercel.app",
+    "https://pravinkumardev.site",
+    "https://www.pravinkumardev.site",
+    "https://api.pravinkumardev.site",
 ]
+
 
 
   
