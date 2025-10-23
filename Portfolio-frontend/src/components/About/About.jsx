@@ -1,7 +1,41 @@
 import React, { useState, useEffect } from 'react';
 import './About.css';
 
-const About = ({ about = {}, education = [] }) => {
+
+const about = {
+  "description": "I’m driven by curiosity, resilience, and a calm determination to solve problems that others walk away from.",
+  "floating_captions": [
+        "Django Enthusiast",
+  "Full Stack Developer",
+  "UI/UX Designer",
+  "Backend Developer",
+  "Frontend Developer"
+    ],
+"resume_link": "https://drive.google.com/file/d/1SHNWsPjqWGhes-cp4XtUPHMixVISYEQc/view?usp=sharing"
+}
+
+const education = [
+  {
+    "degree": "B.Tech Computer Science Engineering",
+    "start_date": "2021-09-01",
+    "end_date": "2025-06-30",
+    "marks_scored": "7.79 CGPA"
+  },
+  {
+    "degree": "Intermediate Pure Science with Computer Science",
+    "start_date": "2019-04-01",
+    "end_date": "2020-06-01",
+    "marks_scored": "77.6%"
+  },
+  {
+    "degree": "Matriculation",
+    "start_date": null,
+    "end_date": "2018-06-01",
+    "marks_scored": "77.6%"
+  }
+]
+
+const About = () => {
   const [heading, setHeading] = useState("");
 
   const headingsArray = about.floating_captions || [];
