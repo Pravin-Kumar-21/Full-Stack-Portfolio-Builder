@@ -7,8 +7,47 @@ import './MyWork.css';
 //   return asset_url
 // };
 
+const work = [
+  {
+    "company_name": "Luein Analytics – Bengaluru, Karnataka",
+    "job_title": "1. Python Django Developer Intern",
+    "start_date": "2024-10-01",
+    "end_date": "2025-02-01",
+    "description": "<ul>\r\n  <li>Developed and maintained a course application platform using Django and Django Rest Framework (DRF).</li>\r\n  <li>Built RESTful APIs, modified scraping code, and gathered data from various sources.</li>\r\n  <li>Worked with senior developers to design the backend and implemented frontend using Django templates, HTML, CSS, and the company’s custom framework.</li>\r\n  <li>Tested APIs, generated reports to optimize costs, and stored scraped data in Elasticsearch for faster retrieval.</li>\r\n  <li>Wrote Python scripts to convert various API JSON formats into the required structure.</li>\r\n</ul>"
+  },
+  {
+    "company_name": "Celebal Technologies – Jaipur, Rajasthan",
+    "job_title": "2. React Developer Intern",
+    "start_date": "2024-06-03",
+    "end_date": "2024-08-03",
+    "description": "<ul>\r\n  <li>Completed weekly assigned tasks within deadlines and collaborated with fellow interns.</li>\r\n  <li>Attended company meetings and gained practical experience in React lifecycle methods and hooks.</li>\r\n  <li>Worked on routing and navigation features using React Router and JavaScript.</li>\r\n</ul>"
+  }
+]
+const about = {
+  "description": "I’m driven by curiosity, resilience, and a calm determination to solve problems that others walk away from.",
+  "floating_captions": [
+    "Django Enthusiast",
+    "Full Stack Developer",
+    "UI/UX Designer",
+    "Backend Developer",
+    "Frontend Developer"
+  ],
+  "resume_link": "https://drive.google.com/file/d/1SHNWsPjqWGhes-cp4XtUPHMixVISYEQc/view?usp=sharing"
+}
+const home = {
+  "name": "Pravin Kumar",
+  "intro": "Hi Viewers,",
+  "subcaption": "Turning Ideas into Web Experiences",
+  "job_title": "Full Stack Developer",
+  "avatar_img": "https://portfolio-builder-drf.s3.ap-south-1.amazonaws.com/Projects+/User+Avatar/IMG_20220418_223644-min.jpg",
+  "paragraph": "Full-Stack Engineer with strong experience in developing and deploying scalable web apps. Proficient in backend development with Django, DjangoRestFramework, seamlessly integrating front-end tech like HTML, Django templates, CSS, and Tailwind CSS. Skilled in React for smooth front-end and backend interaction. Adept at designing robust Python APIs, optimizing performance, and enhancing UX. Hands-on with Elasticsearch, API testing via Postman, and exploring machine learning. Proven ability to deliver innovative, high-quality, and scalable solutions",
+  "HireMe_link": "https://mail.google.com/mail/u/0/?fs=1&to=pravinkumar2108@gmail.com&tf=cm",
+  "asset_id": "https://portfolio-builder-drf.s3.ap-south-1.amazonaws.com/Projects+/Work+Experience+gif-image+related+to+your+work/code+for+life.gif"
+}
 
-const MyWork = ({ work , about = [], home ={} } ) => {
+
+
+const MyWork = () => {
   
   
   const [open, setOpen] = useState({});
