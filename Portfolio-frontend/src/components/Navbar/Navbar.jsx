@@ -1,6 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './Navbar.css';
 
+
+
 const Navbar = () => {
   const [isNavVisible, setIsNavVisible] = useState(false);
   const navRef = useRef(null);
@@ -53,6 +55,7 @@ const  ScrolltoSection = (id) =>{
           )}
         </div>
         <div className={`nav-list ${isNavVisible ? 'open' : ''}`}>
+        
           <div className='nav-btn' onClick={() => ScrolltoSection('homepage')}  >Home</div>
           <div className='nav-btn' onClick={() => ScrolltoSection('about')}  >About</div>
           <div className='nav-btn' onClick={() => ScrolltoSection('service')}  >Services</div>
@@ -60,6 +63,7 @@ const  ScrolltoSection = (id) =>{
           <div className='nav-btn' onClick={() => ScrolltoSection('skills')}  >Skills</div>
           <div className='nav-btn' onClick={() => ScrolltoSection('project')}  >Projects</div>
           <div className='nav-btn' onClick={() => ScrolltoSection('contact')}  >Contact</div>
+          
         </div>
       </div>
     </div>
