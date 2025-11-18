@@ -61,7 +61,7 @@ const HomePage = () => {
           </div>
           
           <div className='avatar-container'>
-            <img src='https://portfolio-builder-drf.s3.ap-south-1.amazonaws.com/Projects+/User+Avatar/IMG_20220418_223644-min.jpg' alt=' User Image'/>
+            <img src='https://my-personal-s3-bucket-portfolio.s3.ap-south-1.amazonaws.com/Projects+/User+Avatar/IMG_20220418_223644-min.jpg' alt=' User Image'/>
           </div>
           
         </div>

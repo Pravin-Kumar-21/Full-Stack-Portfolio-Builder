@@ -39,10 +39,10 @@ const home = {
   "intro": "Hi Viewers,",
   "subcaption": "Turning Ideas into Web Experiences",
   "job_title": "Full Stack Developer",
-  "avatar_img": "https://portfolio-builder-drf.s3.ap-south-1.amazonaws.com/Projects+/User+Avatar/IMG_20220418_223644-min.jpg",
+  "avatar_img": "https://my-personal-s3-bucket-portfolio.s3.ap-south-1.amazonaws.com/Projects+/User+Avatar/IMG_20220418_223644-min.jpg",
   "paragraph": "Full-Stack Engineer with strong experience in developing and deploying scalable web apps. Proficient in backend development with Django, DjangoRestFramework, seamlessly integrating front-end tech like HTML, Django templates, CSS, and Tailwind CSS. Skilled in React for smooth front-end and backend interaction. Adept at designing robust Python APIs, optimizing performance, and enhancing UX. Hands-on with Elasticsearch, API testing via Postman, and exploring machine learning. Proven ability to deliver innovative, high-quality, and scalable solutions",
   "HireMe_link": "https://mail.google.com/mail/u/0/?fs=1&to=pravinkumar2108@gmail.com&tf=cm",
-  "asset_id": "https://portfolio-builder-drf.s3.ap-south-1.amazonaws.com/Projects+/Work+Experience+gif-image+related+to+your+work/code+for+life.gif"
+  "asset_id": "https://my-personal-s3-bucket-portfolio.s3.ap-south-1.amazonaws.com/Projects+/Work+Experience+gif-image+related+to+your+work/code+for+life.gif"
 }
 
 

@@ -13,17 +13,17 @@ const projects = [
       {
         "project": 1,
         "image_name": "3",
-        "image_url": "https://portfolio-builder-drf.s3.ap-south-1.amazonaws.com/Projects+/Dashborad/Screenshot+From+2025-08-23+04-03-47.png"
+        "image_url": "https://my-personal-s3-bucket-portfolio.s3.ap-south-1.amazonaws.com/Projects+/Dashborad/Screenshot+From+2025-08-23+04-03-47.png"
       },
       {
         "project": 1,
         "image_name": "2",
-        "image_url": "https://portfolio-builder-drf.s3.ap-south-1.amazonaws.com/Projects+/Dashborad/Screenshot+From+2025-08-23+04-04-00.png"
+        "image_url": "https://my-personal-s3-bucket-portfolio.s3.ap-south-1.amazonaws.com/Projects+/Dashborad/Screenshot+From+2025-08-23+04-04-00.png"
       },
       {
         "project": 1,
         "image_name": "1",
-        "image_url": "https://portfolio-builder-drf.s3.ap-south-1.amazonaws.com/Projects+/Dashborad/Screenshot+From+2025-08-23+04-04-08.png"
+        "image_url": "https://my-personal-s3-bucket-portfolio.s3.ap-south-1.amazonaws.com/Projects+/Dashborad/Screenshot+From+2025-08-23+04-04-08.png"
       }
     ]
   },
@@ -38,37 +38,37 @@ const projects = [
       {
         "project": 2,
         "image_name": "1",
-        "image_url": "https://portfolio-builder-drf.s3.ap-south-1.amazonaws.com/Projects+/Vendor+Management/1.png"
+        "image_url": "https://my-personal-s3-bucket-portfolio.s3.ap-south-1.amazonaws.com/Projects+/Vendor+Management/1.png"
       },
       {
         "project": 2,
         "image_name": "2",
-        "image_url": "https://portfolio-builder-drf.s3.ap-south-1.amazonaws.com/Projects+/Vendor+Management/2.png"
+        "image_url": "https://my-personal-s3-bucket-portfolio.s3.ap-south-1.amazonaws.com/Projects+/Vendor+Management/2.png"
       },
       {
         "project": 2,
         "image_name": "3",
-        "image_url": "https://portfolio-builder-drf.s3.ap-south-1.amazonaws.com/Projects+/Vendor+Management/3.png"
+        "image_url": "https://my-personal-s3-bucket-portfolio.s3.ap-south-1.amazonaws.com/Projects+/Vendor+Management/3.png"
       },
       {
         "project": 2,
         "image_name": "4",
-        "image_url": "https://portfolio-builder-drf.s3.ap-south-1.amazonaws.com/Projects+/Vendor+Management/4.png"
+        "image_url": "https://my-personal-s3-bucket-portfolio.s3.ap-south-1.amazonaws.com/Projects+/Vendor+Management/4.png"
       },
       {
         "project": 2,
         "image_name": "5",
-        "image_url": "https://portfolio-builder-drf.s3.ap-south-1.amazonaws.com/Projects+/Vendor+Management/5.png"
+        "image_url": "https://my-personal-s3-bucket-portfolio.s3.ap-south-1.amazonaws.com/Projects+/Vendor+Management/5.png"
       },
       {
         "project": 2,
         "image_name": "6",
-        "image_url": "https://portfolio-builder-drf.s3.ap-south-1.amazonaws.com/Projects+/Vendor+Management/6.png"
+        "image_url": "https://my-personal-s3-bucket-portfolio.s3.ap-south-1.amazonaws.com/Projects+/Vendor+Management/6.png"
       },
       {
         "project": 2,
         "image_name": "7",
-        "image_url": "https://portfolio-builder-drf.s3.ap-south-1.amazonaws.com/Projects+/Vendor+Management/7.png"
+        "image_url": "https://my-personal-s3-bucket-portfolio.s3.ap-south-1.amazonaws.com/Projects+/Vendor+Management/7.png"
       }
     ]
   },
@@ -83,32 +83,32 @@ const projects = [
       {
         "project": 3,
         "image_name": "6",
-        "image_url": "https://portfolio-builder-drf.s3.ap-south-1.amazonaws.com/Projects+/Spot+Exposure/Screenshot+From+2025-08-23+04-19-52.png"
+        "image_url": "https://my-personal-s3-bucket-portfolio.s3.ap-south-1.amazonaws.com/Projects+/Spot+Exposure/Screenshot+From+2025-08-23+04-19-52.png"
       },
       {
         "project": 3,
         "image_name": "5",
-        "image_url": "https://portfolio-builder-drf.s3.ap-south-1.amazonaws.com/Projects+/Spot+Exposure/Screenshot+From+2025-08-23+04-20-03.png"
+        "image_url": "https://my-personal-s3-bucket-portfolio.s3.ap-south-1.amazonaws.com/Projects+/Spot+Exposure/Screenshot+From+2025-08-23+04-20-03.png"
       },
       {
         "project": 3,
         "image_name": "4",
-        "image_url": "https://portfolio-builder-drf.s3.ap-south-1.amazonaws.com/Projects+/Spot+Exposure/Screenshot+From+2025-08-23+04-20-16.png"
+        "image_url": "https://my-personal-s3-bucket-portfolio.s3.ap-south-1.amazonaws.com/Projects+/Spot+Exposure/Screenshot+From+2025-08-23+04-20-16.png"
       },
       {
         "project": 3,
         "image_name": "3",
-        "image_url": "https://portfolio-builder-drf.s3.ap-south-1.amazonaws.com/Projects+/Spot+Exposure/Screenshot+From+2025-08-23+04-20-34.png"
+        "image_url": "https://my-personal-s3-bucket-portfolio.s3.ap-south-1.amazonaws.com/Projects+/Spot+Exposure/Screenshot+From+2025-08-23+04-20-34.png"
       },
       {
         "project": 3,
         "image_name": "2",
-        "image_url": "https://portfolio-builder-drf.s3.ap-south-1.amazonaws.com/Projects+/Spot+Exposure/Screenshot+From+2025-08-23+04-20-52.png"
+        "image_url": "https://my-personal-s3-bucket-portfolio.s3.ap-south-1.amazonaws.com/Projects+/Spot+Exposure/Screenshot+From+2025-08-23+04-20-52.png"
       },
       {
         "project": 3,
         "image_name": "1",
-        "image_url": "https://portfolio-builder-drf.s3.ap-south-1.amazonaws.com/Projects+/Spot+Exposure/Screenshot+From+2025-08-23+04-21-39.png"
+        "image_url": "https://my-personal-s3-bucket-portfolio.s3.ap-south-1.amazonaws.com/Projects+/Spot+Exposure/Screenshot+From+2025-08-23+04-21-39.png"
       }
     ]
   },
@@ -123,32 +123,32 @@ const projects = [
       {
         "project": 4,
         "image_name": "7",
-        "image_url": "https://portfolio-builder-drf.s3.ap-south-1.amazonaws.com/Projects+/Portfolio+builder/Screenshot+From+2025-08-23+02-12-50.png"
+        "image_url": "https://my-personal-s3-bucket-portfolio.s3.ap-south-1.amazonaws.com/Projects+/Portfolio+builder/Screenshot+From+2025-08-23+02-12-50.png"
       },
       {
         "project": 4,
         "image_name": "6",
-        "image_url": "https://portfolio-builder-drf.s3.ap-south-1.amazonaws.com/Projects+/Portfolio+builder/Screenshot+From+2025-08-23+02-13-00.png"
+        "image_url": "https://my-personal-s3-bucket-portfolio.s3.ap-south-1.amazonaws.com/Projects+/Portfolio+builder/Screenshot+From+2025-08-23+02-13-00.png"
       },
       {
         "project": 4,
         "image_name": "5",
-        "image_url": "https://portfolio-builder-drf.s3.ap-south-1.amazonaws.com/Projects+/Portfolio+builder/Screenshot+From+2025-08-23+02-56-43.png"
+        "image_url": "https://my-personal-s3-bucket-portfolio.s3.ap-south-1.amazonaws.com/Projects+/Portfolio+builder/Screenshot+From+2025-08-23+02-56-43.png"
       },
       {
         "project": 4,
         "image_name": "4",
-        "image_url": "https://portfolio-builder-drf.s3.ap-south-1.amazonaws.com/Projects+/Portfolio+builder/Screenshot+From+2025-08-23+02-56-59.png"
+        "image_url": "https://my-personal-s3-bucket-portfolio.s3.ap-south-1.amazonaws.com/Projects+/Portfolio+builder/Screenshot+From+2025-08-23+02-56-59.png"
       },
       {
         "project": 4,
         "image_name": "3",
-        "image_url": "https://portfolio-builder-drf.s3.ap-south-1.amazonaws.com/Projects+/Portfolio+builder/Screenshot+From+2025-08-23+03-51-31.png"
+        "image_url": "https://my-personal-s3-bucket-portfolio.s3.ap-south-1.amazonaws.com/Projects+/Portfolio+builder/Screenshot+From+2025-08-23+02-57-13.png"
       },
       {
         "project": 4,
         "image_name": "2",
-        "image_url": "https://portfolio-builder-drf.s3.ap-south-1.amazonaws.com/Projects+/Portfolio+builder/Screenshot+From+2025-08-23+02-57-53.png"
+        "image_url": "https://my-personal-s3-bucket-portfolio.s3.ap-south-1.amazonaws.com/Projects+/Portfolio+builder/Screenshot+From+2025-08-23+03-51-31.png"
       },
       {
         "project": 4,
@@ -168,32 +168,32 @@ const projects = [
       {
         "project": 5,
         "image_name": "8",
-        "image_url": "https://portfolio-builder-drf.s3.ap-south-1.amazonaws.com/Projects+/Airbnb/8-min.png"
+        "image_url": "https://my-personal-s3-bucket-portfolio.s3.ap-south-1.amazonaws.com/Projects+/Airbnb/1-min.png"
       },
       {
         "project": 5,
         "image_name": "9",
-        "image_url": "https://portfolio-builder-drf.s3.ap-south-1.amazonaws.com/Projects+/Airbnb/9-min.png"
+        "image_url": "https://my-personal-s3-bucket-portfolio.s3.ap-south-1.amazonaws.com/Projects+/Airbnb/2-min.png"
       },
       {
         "project": 5,
         "image_name": "5",
-        "image_url": "https://portfolio-builder-drf.s3.ap-south-1.amazonaws.com/Projects+/Airbnb/5-min.png"
+        "image_url": "https://my-personal-s3-bucket-portfolio.s3.ap-south-1.amazonaws.com/Projects+/Airbnb/9-min.png"
       },
       {
         "project": 5,
         "image_name": "4",
-        "image_url": "https://portfolio-builder-drf.s3.ap-south-1.amazonaws.com/Projects+/Airbnb/4-min.png"
+        "image_url": "https://my-personal-s3-bucket-portfolio.s3.ap-south-1.amazonaws.com/Projects+/Airbnb/4-min.png"
       },
       {
         "project": 5,
         "image_name": "3",
-        "image_url": "https://portfolio-builder-drf.s3.ap-south-1.amazonaws.com/Projects+/Airbnb/3-min.png"
+        "image_url": "https://my-personal-s3-bucket-portfolio.s3.ap-south-1.amazonaws.com/Projects+/Airbnb/8-min.png"
       },
       {
         "project": 5,
         "image_name": "2",
-        "image_url": "https://portfolio-builder-drf.s3.ap-south-1.amazonaws.com/Projects+/Airbnb/2-min.png"
+        "image_url": "https://my-personal-s3-bucket-portfolio.s3.ap-south-1.amazonaws.com/Projects+/Airbnb/12-min.png"
       }
     ]
   }
