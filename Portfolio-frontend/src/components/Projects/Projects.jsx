@@ -153,7 +153,7 @@ const projects = [
       {
         "project": 4,
         "image_name": "1",
-        "image_url": "https://portfolio-builder-drf.s3.ap-south-1.amazonaws.com/Projects+/Portfolio+builder/Screenshot+From+2025-08-23+02-57-13.png"
+        "image_url": "https://my-personal-s3-bucket-portfolio.s3.ap-south-1.amazonaws.com/Projects+/Portfolio+builder/Screenshot+From+2025-08-23+03-51-31.png"
       }
     ]
   },
