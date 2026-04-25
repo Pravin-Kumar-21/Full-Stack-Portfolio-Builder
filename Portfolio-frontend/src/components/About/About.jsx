@@ -5,13 +5,13 @@ import './About.css';
 const about = {
   "description": "I’m driven by curiosity, resilience, and a calm determination to solve problems that others walk away from.",
   "floating_captions": [
-        "Django Enthusiast",
-  "Full Stack Developer",
-  "UI/UX Designer",
-  "Backend Developer",
-  "Frontend Developer"
-    ],
-"resume_link": "https://drive.google.com/file/d/1SHNWsPjqWGhes-cp4XtUPHMixVISYEQc/view?usp=sharing"
+    "Full Stack Developer",
+    "Backend Developer",
+    "Frontend Developer",
+    "Django Developer",
+    "UI/UX Designer"
+  ],
+  "resume_link": "https://drive.google.com/file/d/1u4qlgn5d6XH5OzM-cOnyfiugjV-s21zS/view?usp=drive_link"
 }
 
 const education = [

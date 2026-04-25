@@ -9,30 +9,44 @@ import './MyWork.css';
 
 const work = [
   {
+    "company_name": "Soul AI – Remote",
+    "job_title": "1. Python Full Stack Developer [Freelance]",
+    "start_date": "2025-03-01",
+    "end_date": "2025-12-01",
+    "description": "<ul>\r\n  <li>Integrated Python modules with OneDrive, ServiceNow, HubSpot, and GitHub APIs to authenticate, retrieve domain entities, and manage ACL data.</li>\r\n  <li>Implemented incremental synchronization, delta queries, pagination handling, and rate-limit backoff to ensure efficient and complete data ingestion.</li>\r\n  <li>Built resilient API workflows with structured logging, retry mechanisms, and robust error handling to handle transient failures.</li>\r\n  <li>Worked across the stack using Python, React.js, and Django REST Framework to deliver scalable and maintainable solutions.</li>\r\n</ul>"
+  },
+  {
+    "company_name": " GoQuant – Apprenticeship",
+    "job_title": "2. Go Quant Bootcamp Trainee",
+    "start_date": "2025-08-01",
+    "end_date": "2025-08-31",
+    "description": "<ul>\r\n  <li>Developed C++ WebSocket clients using Boost/Beast libraries to stream real-time order book updates for decentralized exchanges (e.g., BTC, ETH markets).</li>\r\n  <li>Implemented REST APIs to place, modify, update, and cancel orders, along with handling order and transaction updates.</li>\r\n  <li>Worked with high-frequency data streams and optimized performance for low-latency trading interactions.</li>\r\n</ul>"
+  },
+  {
     "company_name": "Luein Analytics – Bengaluru, Karnataka",
-    "job_title": "1. Python Django Developer Intern",
+    "job_title": "3. Python Django Developer Intern",
     "start_date": "2024-10-01",
     "end_date": "2025-02-01",
     "description": "<ul>\r\n  <li>Developed and maintained a course application platform using Django and Django Rest Framework (DRF).</li>\r\n  <li>Built RESTful APIs, modified scraping code, and gathered data from various sources.</li>\r\n  <li>Worked with senior developers to design the backend and implemented frontend using Django templates, HTML, CSS, and the company’s custom framework.</li>\r\n  <li>Tested APIs, generated reports to optimize costs, and stored scraped data in Elasticsearch for faster retrieval.</li>\r\n  <li>Wrote Python scripts to convert various API JSON formats into the required structure.</li>\r\n</ul>"
   },
   {
-    "company_name": "Celebal Technologies – Jaipur, Rajasthan",
-    "job_title": "2. React Developer Intern",
-    "start_date": "2024-06-03",
-    "end_date": "2024-08-03",
-    "description": "<ul>\r\n  <li>Completed weekly assigned tasks within deadlines and collaborated with fellow interns.</li>\r\n  <li>Attended company meetings and gained practical experience in React lifecycle methods and hooks.</li>\r\n  <li>Worked on routing and navigation features using React Router and JavaScript.</li>\r\n</ul>"
-  }
+  "company_name": "Celebal Technologies – Jaipur, India",
+  "job_title": "4. React Developer Intern",
+  "start_date": "2024-06-01",
+  "end_date": "2024-08-01",
+  "description": "<ul>\r\n  <li>Developed contact submission forms and dashboards using React.js, focusing on building reusable components to reduce bundle size and improve load performance.</li>\r\n  <li>Created custom React hooks to manage dynamic loaders and optimize data fetching and rendering.</li>\r\n  <li>Implemented lazy loading techniques for components, enhancing application performance and user experience.</li>\r\n  <li>Collaborated on frontend projects and ensured timely delivery within defined deadlines.</li>\r\n</ul>"
+}
 ]
 const about = {
   "description": "I’m driven by curiosity, resilience, and a calm determination to solve problems that others walk away from.",
   "floating_captions": [
-    "Django Enthusiast",
     "Full Stack Developer",
-    "UI/UX Designer",
     "Backend Developer",
-    "Frontend Developer"
+    "Frontend Developer",
+    "Django Developer",
+    "UI/UX Designer",
   ],
-  "resume_link": "https://drive.google.com/file/d/1SHNWsPjqWGhes-cp4XtUPHMixVISYEQc/view?usp=sharing"
+  "resume_link": "https://drive.google.com/file/d/1u4qlgn5d6XH5OzM-cOnyfiugjV-s21zS/view?usp=drive_link"
 }
 const home = {
   "name": "Pravin Kumar",
