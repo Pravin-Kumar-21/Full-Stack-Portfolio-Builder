@@ -31,7 +31,7 @@ env = environ.Env()
 SECRET_KEY = env('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     "127.0.0.1",
@@ -41,6 +41,7 @@ ALLOWED_HOSTS = [
 
 CSRF_TRUSTED_ORIGINS = [
     "http://127.0.0.1:3000",
+    "http://127.0.0.1:8000",
     "http://localhost:3000",
     "https://full-stack-portfolio-builder.vercel.app",
     "https://pravinkumardev.site",
@@ -126,27 +127,27 @@ WSGI_APPLICATION = "portfolio.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-# DATABASES = {
-#     "default": {
-#         "ENGINE": "django.db.backends.sqlite3",
-#         "NAME": BASE_DIR/'db.sqlite3',
-#     }
-# }
-
-
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": env("DB_NAME"),
-        "USER": env("DB_USER"),
-        "PASSWORD": env("DB_PASSWORD"),
-        "HOST": env("DB_HOST"),
-        "PORT": env("DB_PORT"),
-        "OPTIONS": {
-            "sslmode": "require",
-        },
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR/'db.sqlite3',
     }
 }
+
+
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.postgresql",
+#         "NAME": env("DB_NAME"),
+#         "USER": env("DB_USER"),
+#         "PASSWORD": env("DB_PASSWORD"),
+#         "HOST": env("DB_HOST"),
+#         "PORT": env("DB_PORT"),
+#         "OPTIONS": {
+#             "sslmode": "require",
+#         },
+#     }
+# }
 
 
 # DATABASES = {
