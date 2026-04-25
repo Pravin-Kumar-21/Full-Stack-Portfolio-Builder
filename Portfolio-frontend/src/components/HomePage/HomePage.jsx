@@ -15,7 +15,7 @@ const socialData = [
   },
   {
     name: 'Instagram',
-    link: 'http://www.instagram.com/pravin__kumar__3/',
+    link: 'https://www.instagram.com/pravinkumardev.site/',
     social_icon: 'fa-brands fa-square-instagram'
   },
   {
