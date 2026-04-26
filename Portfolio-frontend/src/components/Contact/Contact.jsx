@@ -1,89 +1,7 @@
-// import React, { useState } from 'react';
-// import './Contact.css';
-// import { useDynamicLoader } from '../../hooks/useDynamicLoader'; // adjust path if needed
-
-// const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
-
-// const Contact = () => {
-//   const [formData, setFormData] = useState({
-//     name: '',
-//     email: '',
-//     subject: '',
-//     message: ''
-//   });
-//   const [status, setStatus] = useState('');
-//   const { startLoader, stopLoader } = useDynamicLoader();  
-
-//   const handleChange = (e) => {
-//     setFormData({ ...formData, [e.target.name]: e.target.value });
-//   };
-
-//   const handleSubmit = async (e) => {
-//     e.preventDefault();
-//     setStatus('');
-
-    
-//     await startLoader();
-
-//     try {
-//       const response = await fetch(`${API_BASE_URL}api/contactme/`, {
-//         method: 'POST',
-//         headers: { 'Content-Type': 'application/json' },
-//         body: JSON.stringify(formData),
-//       });
-
-//       console.log(`${API_BASE_URL}`)
-//       if (response.ok) {
-//         setStatus('✅ Message sent successfully!');
-//         setFormData({ name: '', email: '', subject: '', message: '' });
-//       } else {
-//         setStatus('❌ Failed to send message.');
-//       }
-//     } catch (error) {
-//       console.error('Error:', error);
-//       setStatus('⚠️ Something went wrong.');
-//     } finally {
-//       await stopLoader();
-//     }
-//   };
-
-//   return (
-//     <section id='contact'>
-//       <div className='contact-main'>
-//         <div className='contact-heading'>Contact Me</div>
-//         <div className='sub-heading'>Your trusted one-stop hub for tech solutions</div>
-
-//         <form className='contact-container' onSubmit={handleSubmit}>
-//           <div className='section-1'>
-//             <input type='text' name='name' placeholder='Your Name'
-//               value={formData.name} onChange={handleChange} required />
-//             <input type='email' name='email' placeholder='Your Email'
-//               value={formData.email} onChange={handleChange} required />
-//           </div>
-//           <div className='section-2'>
-//             <input type='text' name='subject' placeholder='Subject'
-//               value={formData.subject} onChange={handleChange} required />
-//           </div>
-//           <div className='section-3'>
-//             <textarea name='message' placeholder='Enter Your Message' rows="6"
-//               value={formData.message} onChange={handleChange} required />
-//           </div>
-//           <button type='submit'>Send Message</button>
-//         </form>
-
-//         {status && <p className="status-message">{status}</p>}
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default Contact;
-
 import React, { useState } from 'react';
 import './Contact.css';
-import { useDynamicLoader } from '../../hooks/useDynamicLoader'; // optional
-
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL; // "https://api.pravinkumardev.site/"
+import { useDynamicLoader } from '../../hooks/useDynamicLoader';
+import emailjs from 'emailjs-com';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -92,6 +10,7 @@ const Contact = () => {
     subject: '',
     message: ''
   });
+
   const [status, setStatus] = useState('');
   const { startLoader, stopLoader } = useDynamicLoader() || {};
 
@@ -106,23 +25,19 @@ const Contact = () => {
     if (startLoader) await startLoader();
 
     try {
-      const response = await fetch(`${API_BASE_URL}api/send-mail`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-      });
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        formData,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
 
-      if (response.ok) {
-        setStatus('✅ Message sent successfully!');
-        setFormData({ name: '', email: '', subject: '', message: '' });
-      } else {
-        const errorText = await response.text();
-        console.error('Server Error:', errorText);
-        setStatus('❌ Failed to send message.');
-      }
+      setStatus('✅ Message sent successfully!');
+      setFormData({ name: '', email: '', subject: '', message: '' });
+
     } catch (error) {
       console.error('Error:', error);
-      setStatus('⚠️ Something went wrong. Try again later.');
+      setStatus('❌ Failed to send message.');
     } finally {
       if (stopLoader) await stopLoader();
     }
@@ -144,6 +59,7 @@ const Contact = () => {
               onChange={handleChange}
               required
             />
+
             <input
               type="email"
               name="email"

@@ -10,14 +10,14 @@ import './MyWork.css';
 const work = [
   {
     "company_name": "Soul AI – Remote",
-    "job_title": "1. Python Full Stack Developer [Freelance]",
+    "job_title": "1. Full Stack Developer [Freelance]",
     "start_date": "2025-03-01",
     "end_date": "2025-12-01",
     "description": "<ul>\r\n  <li>Integrated Python modules with OneDrive, ServiceNow, HubSpot, and GitHub APIs to authenticate, retrieve domain entities, and manage ACL data.</li>\r\n  <li>Implemented incremental synchronization, delta queries, pagination handling, and rate-limit backoff to ensure efficient and complete data ingestion.</li>\r\n  <li>Built resilient API workflows with structured logging, retry mechanisms, and robust error handling to handle transient failures.</li>\r\n  <li>Worked across the stack using Python, React.js, and Django REST Framework to deliver scalable and maintainable solutions.</li>\r\n</ul>"
   },
   {
-    "company_name": " GoQuant – Apprenticeship",
-    "job_title": "2. Go Quant Bootcamp Trainee",
+    "company_name": " GoQuant, Apprenticeship – Remote",
+    "job_title": "2. Go Quant Trainee",
     "start_date": "2025-08-01",
     "end_date": "2025-08-31",
     "description": "<ul>\r\n  <li>Developed C++ WebSocket clients using Boost/Beast libraries to stream real-time order book updates for decentralized exchanges (e.g., BTC, ETH markets).</li>\r\n  <li>Implemented REST APIs to place, modify, update, and cancel orders, along with handling order and transaction updates.</li>\r\n  <li>Worked with high-frequency data streams and optimized performance for low-latency trading interactions.</li>\r\n</ul>"
