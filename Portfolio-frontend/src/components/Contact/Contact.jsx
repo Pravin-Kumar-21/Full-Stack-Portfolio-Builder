@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
-import './Contact.css';
-import { useDynamicLoader } from '../../hooks/useDynamicLoader';
-import emailjs from 'emailjs-com';
+import React, { useState } from "react";
+import "./Contact.css";
+import { useDynamicLoader } from "../../hooks/useDynamicLoader";
+import emailjs from "emailjs-com";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
   });
 
-  const [status, setStatus] = useState('');
+  const [status, setStatus] = useState("");
   const { startLoader, stopLoader } = useDynamicLoader() || {};
 
   const handleChange = (e) => {
@@ -20,7 +20,7 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setStatus('');
+    setStatus("");
 
     if (startLoader) await startLoader();
 
@@ -29,15 +29,14 @@ const Contact = () => {
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         formData,
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
       );
 
-      setStatus('✅ Message sent successfully!');
-      setFormData({ name: '', email: '', subject: '', message: '' });
-
+      setStatus("✅ Message sent successfully!");
+      setFormData({ name: "", email: "", subject: "", message: "" });
     } catch (error) {
-      console.error('Error:', error);
-      setStatus('❌ Failed to send message.');
+      console.error("Error:", error);
+      setStatus("❌ Failed to send message.");
     } finally {
       if (stopLoader) await stopLoader();
     }
@@ -47,7 +46,9 @@ const Contact = () => {
     <section id="contact">
       <div className="contact-main">
         <div className="contact-heading">Contact Me</div>
-        <div className="sub-heading">Your trusted one-stop hub for tech solutions</div>
+        <div className="sub-heading">
+          Your trusted one-stop hub for tech solutions
+        </div>
 
         <form className="contact-container" onSubmit={handleSubmit}>
           <div className="section-1">

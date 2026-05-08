@@ -141,3 +141,4 @@ portfolio_env/
 log.txt
 vs_config.txt
 vs_mid_log.txt
+.env.development
